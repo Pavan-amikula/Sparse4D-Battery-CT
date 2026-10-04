@@ -1,0 +1,310 @@
+"""Frozen epoch-12 NMC model evaluated on the 2000bar TIFF stack.
+Six fresh fixed regions, 75 simulated views, fixed Gaussian noise, no training or tuning.
+Different-specimen identity is unconfirmed. This is a separate-stack simulation test.
+"""
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import sys
+from time import perf_counter
+import uuid
+import zipfile
+import numpy as np
+SIZE=128
+PATCH=80
+UNIT_SCALE=.4
+CHECKPOINT_SHA="85d942f6d2697ab57a91c2e3204b034817e5555603183ef9bf90cfc7eaba8750"
+PROTOCOL_SHA="c180e08642f780d85ac121be74732bfc492735d9e88691e7a9ed3e9326b33c62"
+
+
+def sha(path):
+    h = hashlib.sha256()
+    with path.open('rb') as f:
+        for block in iter(lambda: f.read(1024*1024), b''):
+            h.update(block)
+    return h.hexdigest()
+
+def build_model(torch):
+    nn=torch.nn;F=torch.nn.functional
+    def block(a,b,stride=1):
+        return nn.Sequential(nn.Conv3d(a,b,3,padding=1,stride=stride),nn.GELU(),
+                             nn.Conv3d(b,b,3,padding=1),nn.GELU())
+    class BatteryResidualUNet(nn.Module):
+        def __init__(self):
+            super().__init__()
+            self.first=block(1,12);self.down1=block(12,24,2);self.down2=block(24,36,2)
+            self.up1=block(60,24);self.up0=block(36,12);self.correction=nn.Conv3d(12,1,1)
+            nn.init.zeros_(self.correction.weight);nn.init.zeros_(self.correction.bias)
+        def forward(self,x):
+            a=self.first(x);b=self.down1(a);c=self.down2(b)
+            c=F.interpolate(c,size=b.shape[2:],mode='trilinear',align_corners=False)
+            d=self.up1(torch.cat([c,b],dim=1))
+            d=F.interpolate(d,size=a.shape[2:],mode='trilinear',align_corners=False)
+            return x.float()+self.correction(self.up0(torch.cat([d,a],dim=1))).float()
+    return BatteryResidualUNet()
+
+def tile_positions(size=SIZE,patch=PATCH,stride=40):
+    if patch>size:raise ValueError('Patch exceeds volume size.')
+    positions=list(range(0,size-patch+1,stride))
+    if positions[-1]!=size-patch:positions.append(size-patch)
+    return positions
+
+def tiled_predict(array,predict,patch=PATCH,stride=40):
+    size=array.shape[0]
+    if array.shape!=(size,)*3:raise ValueError('Expected cubic inference volume.')
+    positions=tile_positions(size,patch,stride)
+    h=np.maximum(np.hanning(patch),.05).astype(np.float32)
+    weight=h[:,None,None]*h[None,:,None]*h[None,None,:]
+    result=np.zeros(array.shape,dtype=np.float32);weights=np.zeros_like(result)
+    for z in positions:
+        for y in positions:
+            for x in positions:
+                sl=np.s_[z:z+patch,y:y+patch,x:x+patch]
+                pred=predict(array[sl].astype(np.float32)/UNIT_SCALE)*UNIT_SCALE
+                if pred.shape!=(patch,)*3 or not np.isfinite(pred).all():raise ValueError('Invalid model tile.')
+                result[sl]+=pred*weight;weights[sl]+=weight
+    if np.any(weights<=0):raise ValueError('Uncovered inference voxels.')
+    return result/weights
+
+def make_geometry(astra,g):
+    # Preserve training simulation voxel pitch, not claimed NMC physical spacing.
+    width = g['volume_width_mm'] * SIZE/256
+    vg = astra.create_vol_geom(SIZE,SIZE,SIZE,-width/2,width/2,-width/2,width/2,-width/2,width/2)
+    pg = astra.create_proj_geom('cone', *g['reduced_detector_pitch_xy_mm'],250,250,
+                               np.deg2rad(np.arange(0,1200,16)*.3),
+                               g['source_origin_mm'],g['source_detector_mm']-g['source_origin_mm'])
+    return pg,vg,width
+
+def reconstruct(astra,measured,pg,vg,initial=None,iterations=20):
+    ids=[];algorithms=[]
+    try:
+        pid=astra.data3d.create('-proj3d',pg,measured);ids.append(pid)
+        rid=astra.data3d.create('-vol',vg,0 if initial is None else np.ascontiguousarray(initial));ids.append(rid)
+        if initial is None:
+            cfg=astra.astra_dict('FDK_CUDA')
+            cfg.update(ProjectionDataId=pid,ReconstructionDataId=rid)
+            aid=astra.algorithm.create(cfg);algorithms.append(aid);astra.algorithm.run(aid)
+        cfg=astra.astra_dict('SIRT3D_CUDA')
+        cfg.update(ProjectionDataId=pid,ReconstructionDataId=rid)
+        cfg['option']={'MinConstraint':0.0}
+        aid=astra.algorithm.create(cfg);algorithms.append(aid)
+        astra.algorithm.run(aid,iterations=iterations)
+        result=astra.data3d.get(rid).astype(np.float32)
+        if result.shape != (SIZE,)*3 or not np.isfinite(result).all():
+            raise ValueError('Invalid SIRT reconstruction.')
+        return result
+    finally:
+        for aid in algorithms:astra.algorithm.delete(aid)
+        for ident in ids:astra.data3d.delete(ident)
+
+def project(astra,volume,pg,vg):
+    ident=None
+    try:
+        ident,result=astra.create_sino3d_gpu(np.ascontiguousarray(volume),pg,vg)
+        if not np.isfinite(result).all():raise ValueError('Invalid projection.')
+        return result.astype(np.float32)
+    finally:
+        if ident is not None:astra.data3d.delete(ident)
+
+def rmse(a,b):
+    d=a.astype(np.float64)-b.astype(np.float64)
+    return float(np.sqrt(np.mean(d*d)))
+
+def read_regions(root,training_protocol):
+    import tifffile
+    files=[root/f'NMC_90wt_2000bar_{i:03d}.tif' for i in range(1,219)]
+    if not all(p.is_file() for p in files):raise ValueError('Expected all 218 NMC_90wt_2000bar slices.')
+    rows=[{'case_id':f'noise_{i:03d}','z':[45,173],'y':[y,y+SIZE],'x':[1472,1600]}
+          for i,y in enumerate([256,448,640,832,1024,1216])]
+    arrays=np.empty((6,SIZE,SIZE,SIZE),dtype=np.float32)
+    sources=[]
+    for zi,path in enumerate(files[45:173]):
+        a=tifffile.imread(path)
+        if a.shape!=(2048,2048) or a.dtype!=np.uint16:raise ValueError('Unexpected TIFF shape/dtype: '+path.name)
+        for i,row in enumerate(rows):
+            arrays[i,zi]=a[row['y'][0]:row['y'][1],1472:1600].astype(np.float32)*(UNIT_SCALE/65535)
+        sources.append({'name':path.name,'sha256':sha(path)})
+        if (zi+1)%32==0:print(f'Read {zi+1}/128 source slices',flush=True)
+    old=[r['sha256'] for r in training_protocol['source_files']]
+    if [r['sha256'] for r in sources]==old:
+        raise ValueError('Selected TIFFs are byte-identical to the 0bar source. Not a new stack test.')
+    for row,a in zip(rows,arrays):
+        if not np.isfinite(a).all() or float(a.std())<1e-8:
+            raise ValueError('Constant or invalid fixed region: '+row['case_id']+'. No automatic crop replacement.')
+    return arrays,rows,sources
+
+LEVELS = (0.0, 0.01, 0.03, 0.05)
+SEEDS = (202610041, 202610042, 202610043)
+
+def add_noise(clean, fraction, seed):
+    scale = float(np.sqrt(np.mean(clean.astype(np.float64)**2)))
+    if not np.isfinite(scale) or scale <= 0:
+        raise ValueError('Invalid clean projection RMS.')
+    if fraction == 0:
+        return clean.copy(), scale, 0.0
+    rng = np.random.default_rng(seed)
+    noisy = (clean.astype(np.float64) + rng.normal(0, fraction*scale, clean.shape)).astype(np.float32)
+    if not np.isfinite(noisy).all():
+        raise ValueError('Invalid noisy projections.')
+    return noisy, scale, rmse(noisy, clean)
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root', type=Path, required=True)
+    parser.add_argument('--training', type=Path, required=True)
+    parser.add_argument('--out', type=Path, default=Path.cwd()/'results'/'battery_extension')
+    parser.add_argument('--open', action='store_true')
+    args = parser.parse_args()
+    import astra
+    import torch
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    if not astra.use_cuda() or not torch.cuda.is_available():
+        raise ValueError('CUDA ASTRA and PyTorch are required.')
+    started = perf_counter()
+    checkpoint_path = args.training/'best_model.pt'
+    protocol_path = args.training/'protocol.json'
+    if sha(checkpoint_path) != CHECKPOINT_SHA or sha(protocol_path) != PROTOCOL_SHA:
+        raise ValueError('Use the reviewed epoch-12 checkpoint and protocol.')
+    training = json.loads((args.training/'report.json').read_text(encoding='utf-8'))
+    protocol = json.loads(protocol_path.read_text(encoding='utf-8'))
+    if (training['checkpoint_sha256'] != CHECKPOINT_SHA or training['best_epoch'] != 12
+            or training['protocol_sha256'] != PROTOCOL_SHA):
+        raise ValueError('Training report identity differs.')
+    if astra.__version__ != training['astra_version'] or str(torch.__version__) != training['torch_version']:
+        raise ValueError('Use the same ASTRA/PyTorch versions as training.')
+    checkpoint = torch.load(checkpoint_path, map_location='cpu', weights_only=True)
+    cfg = checkpoint['config']
+    if (checkpoint['epoch'] != 12 or checkpoint['protocol_sha256'] != PROTOCOL_SHA
+            or cfg['architecture'] != 'BatteryResidualUNet1ch_12_24_36_zero_head'
+            or cfg['patch_size'] != PATCH or cfg['unit_scale'] != UNIT_SCALE):
+        raise ValueError('Unexpected checkpoint architecture or scaling.')
+    model = build_model(torch).cuda()
+    model.load_state_dict(checkpoint['model_state'], strict=True)
+    model.eval()
+    for p in model.parameters():
+        p.requires_grad_(False)
+    g = protocol['geometry_source']
+    pg, vg, width = make_geometry(astra, g)
+    print('NMC NOISE CHECK | frozen epoch 12 | 6 fresh regions | 60 evaluations | no training', flush=True)
+    targets, rows, sources = read_regions(args.root, protocol)
+    args.out.mkdir(parents=True, exist_ok=True)
+    stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+    run = args.out/f'nmc_noise_{stamp}_{uuid.uuid4().hex[:6]}'
+    run.mkdir()
+    plan = {'levels_fraction_clean_projection_rms': LEVELS, 'seeds': SEEDS, 'regions': rows,
+            'noise_rule': 'Independent additive Gaussian in projection line-integral units; no clipping; sigma=fraction*RMS(clean).',
+            'zero_noise_replicates': 1, 'nonzero_noise_replicates': 3,
+            'checkpoint_sha256': CHECKPOINT_SHA, 'script_sha256': sha(Path(__file__)),
+            'training_performed': False, 'performance_based_selection': False}
+    (run/'locked_plan.json').write_text(json.dumps(plan, indent=2), encoding='utf-8')
+    def predict(patch):
+        with torch.inference_mode(), torch.autocast(device_type='cuda', dtype=torch.float16, enabled=cfg['mixed_precision']):
+            x = torch.from_numpy(np.ascontiguousarray(patch[None,None])).cuda()
+            return model(x)[0,0].float().cpu().numpy()
+    tests = []
+    slices = {}
+    completed = 0
+    for i, (target, row) in enumerate(zip(targets, rows)):
+        clean = project(astra, target, pg, vg)
+        for level in LEVELS:
+            for seed in ((SEEDS[0],) if level == 0 else SEEDS):
+                # Region-specific deterministic streams, shared by every method.
+                effective_seed = seed + i*1000
+                measured, scale, actual_noise = add_noise(clean, level, effective_seed)
+                initial = reconstruct(astra, measured, pg, vg)
+                quantized = initial.astype(np.float16).astype(np.float32)
+                if not np.isfinite(quantized).all():
+                    raise ValueError('Input quantization overflow.')
+                raw = tiled_predict(quantized, predict)
+                physics = reconstruct(astra, measured, pg, vg, quantized, 3)
+                hybrid = reconstruct(astra, measured, pg, vg, raw, 3)
+                volumes = {'sirt20': quantized, 'model_raw': raw, 'sirt23': physics, 'model_sirt3': hybrid}
+                metrics = {}
+                for name, v in volumes.items():
+                    fitted = project(astra, v, pg, vg)
+                    metrics[name] = {'voxel_rmse': rmse(v, target),
+                                     'fit_noisy_projection_rmse': rmse(fitted, measured),
+                                     'clean_same_angle_projection_rmse': rmse(fitted, clean)}
+                tests.append({'region': row, 'noise_fraction': level, 'seed': effective_seed,
+                              'clean_projection_rms': scale, 'actual_noise_rmse': actual_noise,
+                              'metrics': metrics})
+                progress = run/'progress.json'
+                temporary = run/'progress.tmp'
+                temporary.write_text(json.dumps({'plan': plan, 'test_cases': tests},
+                                                indent=2, allow_nan=False), encoding='utf-8')
+                temporary.replace(progress)
+                completed += 1
+                print(f'{completed}/60 | {row["case_id"]} | noise {100*level:.0f}% | seed {effective_seed} | '
+                      f'SIRT23 {metrics["sirt23"]["voxel_rmse"]:.6f} | hybrid {metrics["model_sirt3"]["voxel_rmse"]:.6f}', flush=True)
+                if i == 0 and seed == SEEDS[0]:
+                    for name, v in {'reference': target, **volumes}.items():
+                        slices[f'noise{int(level*100)}_{name}_axial'] = v[64].copy()
+    if sha(checkpoint_path) != CHECKPOINT_SHA:
+        raise ValueError('Checkpoint changed during evaluation.')
+    summaries = []
+    for level in LEVELS:
+        cases = [t for t in tests if t['noise_fraction'] == level]
+        means = {m: {k: float(np.mean([t['metrics'][m][k] for t in cases]))
+                     for k in cases[0]['metrics'][m]} for m in volumes}
+        region_wins = sum(np.mean([t['metrics']['model_sirt3']['voxel_rmse'] for t in cases if t['region']['case_id'] == row['case_id']])
+                          < np.mean([t['metrics']['sirt23']['voxel_rmse'] for t in cases if t['region']['case_id'] == row['case_id']])
+                          for row in rows)
+        summaries.append({'noise_fraction': level, 'evaluations': len(cases), 'mean_metrics': means,
+                          'raw_gain_percent': 100*(1-means['model_raw']['voxel_rmse']/means['sirt20']['voxel_rmse']),
+                          'hybrid_gain_percent': 100*(1-means['model_sirt3']['voxel_rmse']/means['sirt23']['voxel_rmse']),
+                          'hybrid_region_mean_wins': int(region_wins)})
+    fig, ax = plt.subplots(figsize=(7,4), layout='constrained')
+    for name in volumes:
+        ax.plot([100*x['noise_fraction'] for x in summaries], [x['mean_metrics'][name]['voxel_rmse'] for x in summaries], marker='o', label=name)
+    ax.set(xlabel='Gaussian sigma / clean projection RMS (%)', ylabel='Mean voxel RMSE', title='Frozen NMC model: controlled noise sensitivity')
+    ax.legend(); ax.grid(alpha=.25)
+    fig.savefig(run/'noise_curve.png', dpi=150); plt.close(fig)
+    fig, axes = plt.subplots(4,5, figsize=(15,12), layout='constrained')
+    low, high = np.percentile(slices['noise0_reference_axial'], [1,99])
+    for r, level in enumerate(LEVELS):
+        for c, name in enumerate(['reference', *volumes]):
+            axes[r,c].imshow(slices[f'noise{int(level*100)}_{name}_axial'], cmap='gray', vmin=low, vmax=high)
+            axes[r,c].set_title(f'{name} | noise {100*level:.0f}%'); axes[r,c].axis('off')
+    fig.suptitle('First fixed region, first seed, axial slice, common display scale')
+    fig.savefig(run/'noise_comparison.png', dpi=150); plt.close(fig)
+    np.savez_compressed(run/'review_slices.npz', **slices)
+    report = {'status': 'frozen_nmc2000bar_gaussian_noise_sensitivity', 'plan': plan,
+              'training_protocol_sha256': PROTOCOL_SHA, 'source_files': sources,
+              'geometry_source': g, 'simulation_width': width, 'views': 75,
+              'test_cases': tests, 'summaries': summaries, 'total_seconds': perf_counter()-started,
+              'torch_version': str(torch.__version__), 'astra_version': astra.__version__,
+              'limitations': ['Gaussian noise is a sensitivity model, not calibrated photon or scanner noise.',
+                'Six regions are within one stack; noise seeds are repeated measurements, not independent specimens.',
+                'Different-specimen independence is unconfirmed.',
+                'TIFF references are reconstructions, not independent physical ground truth.',
+                'Geometry and intensity units are simulation assumptions with matching forward/inverse operators.',
+                'Both projection metrics use the same angles as reconstruction; neither is a held-out projection test.',
+                'No training, tuning, or performance-based selection. These fresh regions become consumed evaluation data.']}
+    (run/'report.json').write_text(json.dumps(report, indent=2, allow_nan=False), encoding='utf-8')
+    bundle = run/'nmc_noise_review.zip'
+    with zipfile.ZipFile(bundle, 'x', compression=zipfile.ZIP_DEFLATED) as z:
+        for name in ['locked_plan.json', 'report.json', 'noise_curve.png', 'noise_comparison.png', 'review_slices.npz']:
+            z.write(run/name, name)
+        z.write(Path(__file__), 'nmc_noise_robustness_check.py')
+    with zipfile.ZipFile(bundle) as z:
+        if z.testzip() is not None:
+            raise ValueError('ZIP integrity failed.')
+    print('\nFROZEN NOISE SUMMARY | simulated views | positive gain = better')
+    for s in summaries:
+        print(f'Noise {100*s["noise_fraction"]:.0f}% | raw gain {s["raw_gain_percent"]:.2f}% | '
+              f'hybrid gain {s["hybrid_gain_percent"]:.2f}% | hybrid region-mean wins {s["hybrid_region_mean_wins"]}/6')
+    print('Upload ZIP: '+str(bundle.resolve()))
+    if args.open and os.name == 'nt':
+        os.startfile(str((run/'noise_comparison.png').resolve()))
+
+if __name__ == '__main__':
+    try:
+        main()
+    except (OSError, ValueError, KeyError, RuntimeError, ImportError, zipfile.BadZipFile) as exc:
+        print('NMC noise check stopped: '+str(exc), file=sys.stderr)
+        raise SystemExit(1)

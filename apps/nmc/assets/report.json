@@ -1,0 +1,85 @@
+{
+  "status": "nmc_within_scan_pilot_completed",
+  "best_epoch": 12,
+  "epochs": 12,
+  "best_validation_loss": 0.005726252430273841,
+  "checkpoint_sha256": "85d942f6d2697ab57a91c2e3204b034817e5555603183ef9bf90cfc7eaba8750",
+  "test_cases": [
+    {
+      "case_id": "case_030",
+      "voxel_rmse": {
+        "sirt20": 0.005244062010452458,
+        "model_raw": 0.0030721532061654113,
+        "sirt23": 0.005055276047895339,
+        "model_sirt3": 0.0029021968454163165
+      }
+    },
+    {
+      "case_id": "case_031",
+      "voxel_rmse": {
+        "sirt20": 0.006553559276639503,
+        "model_raw": 0.004174824313131,
+        "sirt23": 0.006332520584396862,
+        "model_sirt3": 0.0039688863535076455
+      }
+    },
+    {
+      "case_id": "case_032",
+      "voxel_rmse": {
+        "sirt20": 0.006516322018883065,
+        "model_raw": 0.004210148192275947,
+        "sirt23": 0.006294425191391158,
+        "model_sirt3": 0.004006797820658839
+      }
+    },
+    {
+      "case_id": "case_033",
+      "voxel_rmse": {
+        "sirt20": 0.0067155780582209635,
+        "model_raw": 0.004283352232518396,
+        "sirt23": 0.006485957359210114,
+        "model_sirt3": 0.004073213958647793
+      }
+    },
+    {
+      "case_id": "case_034",
+      "voxel_rmse": {
+        "sirt20": 0.006682310370438162,
+        "model_raw": 0.0042793903353187685,
+        "sirt23": 0.006455090984454432,
+        "model_sirt3": 0.004073908941585359
+      }
+    },
+    {
+      "case_id": "case_035",
+      "voxel_rmse": {
+        "sirt20": 0.006526878238677203,
+        "model_raw": 0.004207670422912784,
+        "sirt23": 0.006304674673269337,
+        "model_sirt3": 0.004005063339362037
+      }
+    }
+  ],
+  "mean_test_voxel_rmse": {
+    "sirt20": 0.006373118328885225,
+    "model_raw": 0.004037923117053717,
+    "sirt23": 0.006154657473436207,
+    "model_sirt3": 0.003838344543196332
+  },
+  "raw_model_reduction_vs_sirt20_percent": 36.64132833133786,
+  "model_sirt3_reduction_vs_sirt23_percent": 37.63512332306373,
+  "protocol_sha256": "c180e08642f780d85ac121be74732bfc492735d9e88691e7a9ed3e9326b33c62",
+  "total_seconds": 200.34882760001346,
+  "torch_version": "2.11.0+cu128",
+  "astra_version": "2.5.0",
+  "limitations": [
+    "Train, validation and test regions come from one scan, not independent specimens.",
+    "Regions do not overlap and fixed XY gaps separate the split strips, but scan-specific correlations remain.",
+    "The previously evaluated central block was excluded; this does not restore it as a fresh test.",
+    "TIFF reconstructions are reference targets, not independent physical ground truth.",
+    "Views are noiseless simulations with matching forward/inverse geometry; real acquired data may perform worse.",
+    "Intensity units and geometry are assumptions, not NMC physical calibration.",
+    "No battery defect labels, battery health prediction or time-resolved 4D reconstruction are evaluated.",
+    "All six test regions are now consumed evaluation data; further tuning requires a new independent evaluation."
+  ]
+}

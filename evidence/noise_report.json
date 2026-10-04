@@ -1,0 +1,3365 @@
+{
+  "status": "frozen_nmc2000bar_gaussian_noise_sensitivity",
+  "plan": {
+    "levels_fraction_clean_projection_rms": [
+      0.0,
+      0.01,
+      0.03,
+      0.05
+    ],
+    "seeds": [
+      202610041,
+      202610042,
+      202610043
+    ],
+    "regions": [
+      {
+        "case_id": "noise_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      {
+        "case_id": "noise_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      {
+        "case_id": "noise_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      {
+        "case_id": "noise_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      {
+        "case_id": "noise_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      {
+        "case_id": "noise_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      }
+    ],
+    "noise_rule": "Independent additive Gaussian in projection line-integral units; no clipping; sigma=fraction*RMS(clean).",
+    "zero_noise_replicates": 1,
+    "nonzero_noise_replicates": 3,
+    "checkpoint_sha256": "85d942f6d2697ab57a91c2e3204b034817e5555603183ef9bf90cfc7eaba8750",
+    "script_sha256": "7b25fab0f0b3e5919a11e4905128661347417d727f534b856078f74b2961f8c1",
+    "training_performed": false,
+    "performance_based_selection": false
+  },
+  "training_protocol_sha256": "c180e08642f780d85ac121be74732bfc492735d9e88691e7a9ed3e9326b33c62",
+  "source_files": [
+    {
+      "name": "NMC_90wt_2000bar_046.tif",
+      "sha256": "3ef18f63e5f6ae0abc3177716a40fdf26f6aec8cbf1a5ed716aca494998bb679"
+    },
+    {
+      "name": "NMC_90wt_2000bar_047.tif",
+      "sha256": "4b4d9a88512976df9130709d4738704cdeadcf8f95764fcebb1ba70a95eb58f8"
+    },
+    {
+      "name": "NMC_90wt_2000bar_048.tif",
+      "sha256": "6643e5fd1214226cf41acc099ba7307772e0f6a4340ab09cae4effc94dc926e5"
+    },
+    {
+      "name": "NMC_90wt_2000bar_049.tif",
+      "sha256": "5d5d3694b0d7e417b27e62e6e3728126261876a76230e71a8ee136278a2dc049"
+    },
+    {
+      "name": "NMC_90wt_2000bar_050.tif",
+      "sha256": "82a1fa470b2b882d6c5bfe7729a314ab2038f6ecdc779eab235041f044c86afd"
+    },
+    {
+      "name": "NMC_90wt_2000bar_051.tif",
+      "sha256": "6425dc27dee067488d32951ef3e324dc37ef31fdd734ee7a19fcde9b3cdc9f15"
+    },
+    {
+      "name": "NMC_90wt_2000bar_052.tif",
+      "sha256": "6086707f694cfb5dec127ef28ea1e2a407171122f8d71b1d14bf3f257bfa7857"
+    },
+    {
+      "name": "NMC_90wt_2000bar_053.tif",
+      "sha256": "2a72b0358dfcb401f4c63996551ffe24c451e2e95a56ab31c2cc9248ba0896f7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_054.tif",
+      "sha256": "279aecd1e18fbb3f1c00498834098e29c2a9a2ca24fdd334c1914aaa217e0641"
+    },
+    {
+      "name": "NMC_90wt_2000bar_055.tif",
+      "sha256": "5108506fa2838a585361fd0120bbb038dedfda0bb71d81b70b2a6e21dc7dcba1"
+    },
+    {
+      "name": "NMC_90wt_2000bar_056.tif",
+      "sha256": "f84191d7920e112d99b510902e367fcdfa03a1ce055b477e51ecf19f2bcb914e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_057.tif",
+      "sha256": "f3ae0337bd6d01231943b6d7677fd3ffa80ff79949410fbc891ddda872a0cd32"
+    },
+    {
+      "name": "NMC_90wt_2000bar_058.tif",
+      "sha256": "1d6a333ef9849e5211f3d1a18664e59a7215bacaa5f055b87c530c8d03a349e8"
+    },
+    {
+      "name": "NMC_90wt_2000bar_059.tif",
+      "sha256": "2c38da074fdb190d43a2d37f7ff0ec4d4d0615681ae6a65b650d8a1455c154ce"
+    },
+    {
+      "name": "NMC_90wt_2000bar_060.tif",
+      "sha256": "3dfff47f8fa740c6c3986f4fa553750991bc82631dc73c09c942867e13f5d29e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_061.tif",
+      "sha256": "e8ff7131cc766553322fc196be501415e6a300770f39e36fff7ea3b3f9651a5f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_062.tif",
+      "sha256": "31cbaa2ec9c0568cd73f716dc654284fd6af7cbf18f8de54b5da85ca66382ee5"
+    },
+    {
+      "name": "NMC_90wt_2000bar_063.tif",
+      "sha256": "b893d8d8808ae093d7c2f99b891e10eb74ccd72bdeba9d14e622e300d545166f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_064.tif",
+      "sha256": "5f39fd2f60512bdcb113492ac8c6cabfba88eb0a2d8b23ac625b5477749f6735"
+    },
+    {
+      "name": "NMC_90wt_2000bar_065.tif",
+      "sha256": "c062521e4c41cd86ed781e3d5a16c5e5b1fc195796f5396b8d4226043dc27d44"
+    },
+    {
+      "name": "NMC_90wt_2000bar_066.tif",
+      "sha256": "45d1aeed64c94387ee3e92d8ff6902ff7ee74bfa447d21ef06bb76081785e75a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_067.tif",
+      "sha256": "44687a78a98577b06225fa60317b2f4d79d99118e4c62df8edc6c982bef2fde6"
+    },
+    {
+      "name": "NMC_90wt_2000bar_068.tif",
+      "sha256": "8f8090817102ee42d899e6c2737828f3632a554dc30d83445435d973e13fe967"
+    },
+    {
+      "name": "NMC_90wt_2000bar_069.tif",
+      "sha256": "2f3bef4671d6ade8e3a1ade3b68f316514b9028464138817d141c9ccbbc7e75e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_070.tif",
+      "sha256": "30b0d91bf35faeb59dfd42800c68105246c5bf734fd553a5c3079c36b8522ad3"
+    },
+    {
+      "name": "NMC_90wt_2000bar_071.tif",
+      "sha256": "cc0631aed9a2f760f7ef719c16cde271f761e2a95194986f97ca752921705a1e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_072.tif",
+      "sha256": "bffd8259a6cc33df412be4b7ca72cf4524240b585190c163ddb1a7899197bec2"
+    },
+    {
+      "name": "NMC_90wt_2000bar_073.tif",
+      "sha256": "a39e3314011e4588f3f771a83b380714a8a6580b2e906ecb8548460b1443892e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_074.tif",
+      "sha256": "4e3e1ea1fc365d6399fb5efd7fb784ca57bb44487f6c0ad73a1dd0121f1ad85b"
+    },
+    {
+      "name": "NMC_90wt_2000bar_075.tif",
+      "sha256": "772402b706279f15448b3f22cb382a1b77b0f9cf7155fd23ec6dae0bb5536c6f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_076.tif",
+      "sha256": "657f24a5e538cc582782d23c0e623293ce55dd23a23baad6c6226091be6bfa0b"
+    },
+    {
+      "name": "NMC_90wt_2000bar_077.tif",
+      "sha256": "dead965b41b00512c0cdd031d94478c3e27ce322d298ba3a199c562c161314e6"
+    },
+    {
+      "name": "NMC_90wt_2000bar_078.tif",
+      "sha256": "b9df0a2c5ca1ee312fd17c287832a59d1e00073b9b599defdc4cbccc155fb0fe"
+    },
+    {
+      "name": "NMC_90wt_2000bar_079.tif",
+      "sha256": "87789517882c2de2b52ab3e1379d63e443e2a7c571263a82929f90c2817b18f7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_080.tif",
+      "sha256": "6e885230038f6fc94192f60a4fdc37969409962f00f942120291782da0ecfee4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_081.tif",
+      "sha256": "199b58414b5a92bcf33edcf2b6bd6769778b0cb902a098358f6de6407f12044e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_082.tif",
+      "sha256": "a6771d0b98a32fe6a49d5585aabcd0ff2e15f5a90c65f1b67b91b48220013527"
+    },
+    {
+      "name": "NMC_90wt_2000bar_083.tif",
+      "sha256": "77e1a5dd07cdef378625a541fecce6fbbe887efce287b373c9714c9e824f142d"
+    },
+    {
+      "name": "NMC_90wt_2000bar_084.tif",
+      "sha256": "7b4aeeab3e09a44657975100a6b1689f5e0916bb581752a0c39151b766e69291"
+    },
+    {
+      "name": "NMC_90wt_2000bar_085.tif",
+      "sha256": "4d3f420963d451fbe45842eef988545a0706916b362170b4efcd12f56abdda42"
+    },
+    {
+      "name": "NMC_90wt_2000bar_086.tif",
+      "sha256": "b1e3b17ddd73ae9577ddf5eccc0e926e7e7b92a4b2610f03437f2dacbe887464"
+    },
+    {
+      "name": "NMC_90wt_2000bar_087.tif",
+      "sha256": "c3e87aef1e4868468722f8a5ec5217f3a87dcb7a82e0145c9086cfd84f1d58cc"
+    },
+    {
+      "name": "NMC_90wt_2000bar_088.tif",
+      "sha256": "f6341018f55dbc4adaa6479cc6d580e4faa1314bdf3ea818a106d95ccd051ff0"
+    },
+    {
+      "name": "NMC_90wt_2000bar_089.tif",
+      "sha256": "dd9ccb594e9116605851fa3e112ab72d95de6a90148f70571b01cd74a32d91d4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_090.tif",
+      "sha256": "4fed398c24c1475ddee269c18f7df5dc10fc3d79dfa85cfc66d0ce045ce8d4d9"
+    },
+    {
+      "name": "NMC_90wt_2000bar_091.tif",
+      "sha256": "b4741883e69a7a142004e82566cea40e1beabf0d4241284b6ad6e934c917560d"
+    },
+    {
+      "name": "NMC_90wt_2000bar_092.tif",
+      "sha256": "f89ab66cd7b52b853000966c648615b05e5169624b3c4dc09f069680d6f58e53"
+    },
+    {
+      "name": "NMC_90wt_2000bar_093.tif",
+      "sha256": "0c121b3156bd2472e3720d39fd51cbbc8e31141caabbdfff981f8b9be3f7e8f4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_094.tif",
+      "sha256": "94da786f98b3777ee0192568010777e740660728c2d93ee65d17bee310abb4a4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_095.tif",
+      "sha256": "d5f7286b250cd00086827b9b35af086e12e6fb56037fc8a97828549d275ada1d"
+    },
+    {
+      "name": "NMC_90wt_2000bar_096.tif",
+      "sha256": "d3aa2a1c6b1f6dd5ef109e4723dd6805f8612ffff1a8631c2bf43eca97dc6ab0"
+    },
+    {
+      "name": "NMC_90wt_2000bar_097.tif",
+      "sha256": "abf0b2ae1ca1ff7b27c7148a7c1e7aba1ec6bac5fbcb714c44f213da200c0cca"
+    },
+    {
+      "name": "NMC_90wt_2000bar_098.tif",
+      "sha256": "0446338700bf63a7b68c0cb31f0010003e8ae503e50a1fdf92421899889bacd9"
+    },
+    {
+      "name": "NMC_90wt_2000bar_099.tif",
+      "sha256": "45f772ec66ea7b8316c719a79da874b3c9311673ca9e5acb93c96335b63708ba"
+    },
+    {
+      "name": "NMC_90wt_2000bar_100.tif",
+      "sha256": "d4d0bd5fc04860df9b0a9b1201982effb8fbd4525a37051d2e0dc17eddd68328"
+    },
+    {
+      "name": "NMC_90wt_2000bar_101.tif",
+      "sha256": "193669a3a13c5ca726debf32f1d571763b4574cd113f1fe969c90824f9d17897"
+    },
+    {
+      "name": "NMC_90wt_2000bar_102.tif",
+      "sha256": "438b6243b363c8b23cd438b83a27550d7a815e6715457b663584d839c4ca375e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_103.tif",
+      "sha256": "cd4dd96fe695c142dac242a439a66c9f66efac3aeafb50c98c832bff04ecc4a1"
+    },
+    {
+      "name": "NMC_90wt_2000bar_104.tif",
+      "sha256": "11b6c0abe40ab00e76766eac2e4145b5d9d5d36e498664df19dc0c69f0491b02"
+    },
+    {
+      "name": "NMC_90wt_2000bar_105.tif",
+      "sha256": "a411e1c794392e6a436f5d9e25348999eec9ca90f34b9429a567a237546bf462"
+    },
+    {
+      "name": "NMC_90wt_2000bar_106.tif",
+      "sha256": "43afb1a178d940f4553a27ba45d9b2f066f5b748c48322da84e25b7a9e2040bc"
+    },
+    {
+      "name": "NMC_90wt_2000bar_107.tif",
+      "sha256": "8e6b70bfb0197676a635eb2c8bef326731f31eae32014c16a1e604d6966cfce0"
+    },
+    {
+      "name": "NMC_90wt_2000bar_108.tif",
+      "sha256": "b7477c773f990edaa6dbc896cf768e014c85f8ceca8ed2f2221560ea8b07cb04"
+    },
+    {
+      "name": "NMC_90wt_2000bar_109.tif",
+      "sha256": "bade50580782634a99b68522aedc6497059785262abffe0ac4f411181e756435"
+    },
+    {
+      "name": "NMC_90wt_2000bar_110.tif",
+      "sha256": "08067aee9688cee5f9d85ef41816035d2b6bda8cd10a6611f7262adb68dfd8bc"
+    },
+    {
+      "name": "NMC_90wt_2000bar_111.tif",
+      "sha256": "509b8b4c9f613cafe1d17d9500b4080083bfafb9ebc73559418b37560fb8ae2b"
+    },
+    {
+      "name": "NMC_90wt_2000bar_112.tif",
+      "sha256": "e776a8dbc39d7d5bfff1ab9831f1b200bee7ed21d6b02938465fdffa3717c335"
+    },
+    {
+      "name": "NMC_90wt_2000bar_113.tif",
+      "sha256": "b012d2cf03eb1ef0686a933c5e10b109ab9dff41efe1c8748249ed06c2a4405f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_114.tif",
+      "sha256": "4b124b04904eb9516c2ec9463a272869aa53c251872e0238dddfff637ad4646a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_115.tif",
+      "sha256": "b6a59b8154eb281dc342b3e2864a148ce42a6f35079ce4260d699a5a6cf2e4f5"
+    },
+    {
+      "name": "NMC_90wt_2000bar_116.tif",
+      "sha256": "855495c351c530231b5cdfc8515dd5b5491f279bb3362d2bddd79d3e63961a99"
+    },
+    {
+      "name": "NMC_90wt_2000bar_117.tif",
+      "sha256": "a937e30035bde5f53924bc35f9f449ea8cdbb9e19b1f02f96ae4fe560b085551"
+    },
+    {
+      "name": "NMC_90wt_2000bar_118.tif",
+      "sha256": "fb063c290c2486ef46a1d0c905754227bcf5d1e2e054893ae70ace2254d6f63a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_119.tif",
+      "sha256": "10fbca3617a4539ece30b87f8efccbe16e666155fe95739d75d366de8a478914"
+    },
+    {
+      "name": "NMC_90wt_2000bar_120.tif",
+      "sha256": "3855f117236f207f41214f89f348c9b1c9a68e12d229988e7031b93598c678c2"
+    },
+    {
+      "name": "NMC_90wt_2000bar_121.tif",
+      "sha256": "ecdc898ab3238fc60bbacb967aa520e149cb9df1a8bd38b8a5b558271e9f3675"
+    },
+    {
+      "name": "NMC_90wt_2000bar_122.tif",
+      "sha256": "8c5b264aff6a05baa6370e7c7cfc95e6b3eaa2ef96e80a3118c853824f1132b3"
+    },
+    {
+      "name": "NMC_90wt_2000bar_123.tif",
+      "sha256": "c1ea75dae48bb61fc7badc66d2a9f4fc8229e0ea8fc951fdfc32a9fd11bce26f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_124.tif",
+      "sha256": "efa1854c3b6c2419aad8468feb69411844cbed35f14efc84a43252d82c522beb"
+    },
+    {
+      "name": "NMC_90wt_2000bar_125.tif",
+      "sha256": "42455974ad20affdefe1c6d4a1be43a24e9d3f803ac8c0127d40fb01b6cade7b"
+    },
+    {
+      "name": "NMC_90wt_2000bar_126.tif",
+      "sha256": "277d3c1a5aec611253d6727daa8540d15e6f544b13081f3c11742758bc98a8d7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_127.tif",
+      "sha256": "dd770832e55b584b8234eeebb7e231c4e4dde1a6134db380a5d3ae8b30286607"
+    },
+    {
+      "name": "NMC_90wt_2000bar_128.tif",
+      "sha256": "d24c4e0f7f10435cfdcf22fe47ca950e4cb835b8261f58b99e52045a8a58135d"
+    },
+    {
+      "name": "NMC_90wt_2000bar_129.tif",
+      "sha256": "6c07a2ea02c2a875cac47a99987c32d1ff6c455d2762ff59cab2bd1ec1f943c3"
+    },
+    {
+      "name": "NMC_90wt_2000bar_130.tif",
+      "sha256": "5e471b41a3125f98444938dd15da2ae1d316bca2a4c39b7f08b16373f56ef7c8"
+    },
+    {
+      "name": "NMC_90wt_2000bar_131.tif",
+      "sha256": "a38f3510a5cb5f2284cb61d23be69728bab002d5b3144062544adb89e8483e49"
+    },
+    {
+      "name": "NMC_90wt_2000bar_132.tif",
+      "sha256": "aae594124314363edacecb539332f3d27ecb2bd7f995e408a640cbc6b8d918a7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_133.tif",
+      "sha256": "a07f9f46590a05967daa353d42f9f16c68cc49bef9fc544a7a930575226a6284"
+    },
+    {
+      "name": "NMC_90wt_2000bar_134.tif",
+      "sha256": "0a79a8f63ced1b0f0043720e6d9fbc4ac75fd8f5eb788b24f2290b90a892def2"
+    },
+    {
+      "name": "NMC_90wt_2000bar_135.tif",
+      "sha256": "a29704ecdc143274f86885ca9d648f1c92044bf853a7b83621f0af41a05f9c13"
+    },
+    {
+      "name": "NMC_90wt_2000bar_136.tif",
+      "sha256": "5dfc11bbef4849bf37505e74947fced793538dadd1a9b5654bd3a8cfe0a3079d"
+    },
+    {
+      "name": "NMC_90wt_2000bar_137.tif",
+      "sha256": "c9547c33b58af7dbd3b4068520ca84226a230e56038ef7d585e453e50450e4e4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_138.tif",
+      "sha256": "4c98555fcb0aecc24edd775ec6f1975373e21dfab1c6df9c08a63a3a70d8e791"
+    },
+    {
+      "name": "NMC_90wt_2000bar_139.tif",
+      "sha256": "be33091700c973a765d687319b8bee7b748b7df76206cd12891bf054ec7f5ea4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_140.tif",
+      "sha256": "a1ebce52569309cf4c594dee6cc577332f399432d3b2613c41c69f11b9b3536a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_141.tif",
+      "sha256": "750c51ffff40ee2275e38cf02cad03dca0bf711e3951642a3c7e0f5f35fc0cfc"
+    },
+    {
+      "name": "NMC_90wt_2000bar_142.tif",
+      "sha256": "263748dc6a8a99aec948f7893641a7036233c95c94ab269e49d7c4ee31d33626"
+    },
+    {
+      "name": "NMC_90wt_2000bar_143.tif",
+      "sha256": "59856ba9e1a5454b78e7766883668ad4cb58456e75aeb293f98a4905d3ea4d7f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_144.tif",
+      "sha256": "4cc673b06b8e67a0e00ca50724eaa07c2e2636ce286237f37eaf6fbc4d136197"
+    },
+    {
+      "name": "NMC_90wt_2000bar_145.tif",
+      "sha256": "3a56c2938adacc76a1fa3b26c39bdcf6b7aebb9336834f36392d998380fffd18"
+    },
+    {
+      "name": "NMC_90wt_2000bar_146.tif",
+      "sha256": "df16c7bd2b917b217c99cd1348de403f2cdf4456fd4f4cb2b17d17f361c0c308"
+    },
+    {
+      "name": "NMC_90wt_2000bar_147.tif",
+      "sha256": "e9fa94138455573dc42d4008800d6cf03ec85bb4a3dcee65bac10ccf40f52d7a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_148.tif",
+      "sha256": "743cbe7b22f503b08aa771d211659989b380d51494d134f03028c1d3a585f37c"
+    },
+    {
+      "name": "NMC_90wt_2000bar_149.tif",
+      "sha256": "276d9327024367efec8eefb2f83673fd2e8634b277063988bcf62cd6b1174080"
+    },
+    {
+      "name": "NMC_90wt_2000bar_150.tif",
+      "sha256": "845cc5e59e92ea8f922dd59073647910ff4ef41e78027830a3edff7412316061"
+    },
+    {
+      "name": "NMC_90wt_2000bar_151.tif",
+      "sha256": "b16c3c29d85c5bc1177d865b5c7948b90ab28d1c994c24d6aaaaafaf179083b7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_152.tif",
+      "sha256": "9638d7db2c1475c0d04677542a467d06f37ce388291d3c414055c9717df5384a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_153.tif",
+      "sha256": "80ee30030a5bfafa1b2c7bd816bafac72687137bfa5e679519c17d17464ee154"
+    },
+    {
+      "name": "NMC_90wt_2000bar_154.tif",
+      "sha256": "7ba4b5d61402ec7cd2b2f4f6f15a90427e9cec912afb69cbf1fae9fafc314d8e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_155.tif",
+      "sha256": "ce6db8a4aa1ee64210bb4b0b96effe0701fca8c91532a89029f80d7b260b0ed3"
+    },
+    {
+      "name": "NMC_90wt_2000bar_156.tif",
+      "sha256": "5ba60c8c55e29b86dbbb459822967822fd9f3724385838424ca4e3fc8e1d9b11"
+    },
+    {
+      "name": "NMC_90wt_2000bar_157.tif",
+      "sha256": "f8d8d93224597731a9845a73b500dbc64b778a83f58fd6b8ee1094a2d03e87d9"
+    },
+    {
+      "name": "NMC_90wt_2000bar_158.tif",
+      "sha256": "3fe5b2c936bfa312d98e24eebd07e7f1058e5bbb9e8ed7a8471d446c00f04030"
+    },
+    {
+      "name": "NMC_90wt_2000bar_159.tif",
+      "sha256": "661aca6356152b7e6043695cca28a2a90f924d832deee9bc6a163258426a68b5"
+    },
+    {
+      "name": "NMC_90wt_2000bar_160.tif",
+      "sha256": "1f1b85a5405d106c9bb989b12539ca32e25ea7ddde4c68ee9bbbf005397eb671"
+    },
+    {
+      "name": "NMC_90wt_2000bar_161.tif",
+      "sha256": "144029facc3fb1f901a48ce66a17ad1546d8535cfbf4944fb4576037e668f7c7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_162.tif",
+      "sha256": "87fb9a20b06cdc37b4fea334594635a00bacfa3c050936b4893e0f0ae4ef6424"
+    },
+    {
+      "name": "NMC_90wt_2000bar_163.tif",
+      "sha256": "e3e0868130261e7067d181b5589d0ad413f5289615a7bdce89f3e235f9379fe8"
+    },
+    {
+      "name": "NMC_90wt_2000bar_164.tif",
+      "sha256": "859275b82fe0375c660305a65b37f6ce5d0eb399caf9c1fc100eef982e21c48f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_165.tif",
+      "sha256": "7bb57bf689f78f8f440b5dcdd2330ad5b22e8822e320dd368ed566237a8594c6"
+    },
+    {
+      "name": "NMC_90wt_2000bar_166.tif",
+      "sha256": "c437aaeca4ffb4780dcfee1db6b066b010c180ed87471e398f56848d6195da8f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_167.tif",
+      "sha256": "335be1cf2b23a0c011cb398bd1294004b957c863a7acec0e0e124534167bf86c"
+    },
+    {
+      "name": "NMC_90wt_2000bar_168.tif",
+      "sha256": "a52110f02da63c773f32802fe5ec190fcffaa8755e1e589759d7bae8992d9d5b"
+    },
+    {
+      "name": "NMC_90wt_2000bar_169.tif",
+      "sha256": "94a31e3b05adb3dabe0c025c3c950d06efb162101b778c4bf3e80e99bc648771"
+    },
+    {
+      "name": "NMC_90wt_2000bar_170.tif",
+      "sha256": "d3bd919db4354b96dbb61895e5d03957c07c9e4d748abf45b4b4b2d6ddbe8105"
+    },
+    {
+      "name": "NMC_90wt_2000bar_171.tif",
+      "sha256": "0c0e50ce0551a9dd737d5c211ded262205dc80125c09084584efb3ab820807db"
+    },
+    {
+      "name": "NMC_90wt_2000bar_172.tif",
+      "sha256": "722982054c50c6b6d96c6b8518998014450be9a7a23a941f80d15e6f6ca2c586"
+    },
+    {
+      "name": "NMC_90wt_2000bar_173.tif",
+      "sha256": "f9924a93e2750f1eb4e04e18ba6ef81426ba18286469b5b5da6666db47147e3c"
+    }
+  ],
+  "geometry_source": {
+    "source_origin_mm": 129.03973962,
+    "source_detector_mm": 806.495599,
+    "original_detector_pitch_xy_mm": [
+      0.2,
+      0.2
+    ],
+    "reduced_detector_pitch_xy_mm": [
+      0.6000000000000001,
+      0.6000000000000001
+    ],
+    "volume_width_mm": 24.000082165002823,
+    "volume_voxel_mm": 0.09375032095704228,
+    "size_xyz": [
+      256,
+      256,
+      256
+    ],
+    "ignored_vendor_tilt": -0.00044246,
+    "vendor_correction_value_not_interpreted": 1.095
+  },
+  "simulation_width": 12.000041082501411,
+  "views": 75,
+  "test_cases": [
+    {
+      "region": {
+        "case_id": "noise_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.0,
+      "seed": 202610041,
+      "clean_projection_rms": 1.1859823552174151,
+      "actual_noise_rmse": 0.0,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.0070828728892996864,
+          "fit_noisy_projection_rmse": 0.0036957880267221247,
+          "clean_same_angle_projection_rmse": 0.0036957880267221247
+        },
+        "model_raw": {
+          "voxel_rmse": 0.004660378104202514,
+          "fit_noisy_projection_rmse": 0.0029427187435674997,
+          "clean_same_angle_projection_rmse": 0.0029427187435674997
+        },
+        "sirt23": {
+          "voxel_rmse": 0.006845102615051254,
+          "fit_noisy_projection_rmse": 0.003467490345589015,
+          "clean_same_angle_projection_rmse": 0.003467490345589015
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.004441951713903216,
+          "fit_noisy_projection_rmse": 0.002695711774080706,
+          "clean_same_angle_projection_rmse": 0.002695711774080706
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202610041,
+      "clean_projection_rms": 1.1859823552174151,
+      "actual_noise_rmse": 0.011855279702824973,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011742310992741267,
+          "fit_noisy_projection_rmse": 0.011590344162199711,
+          "clean_same_angle_projection_rmse": 0.0058058851574072715
+        },
+        "model_raw": {
+          "voxel_rmse": 0.00983979902609957,
+          "fit_noisy_projection_rmse": 0.011402731574388163,
+          "clean_same_angle_projection_rmse": 0.005002820711351736
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011715776223551468,
+          "fit_noisy_projection_rmse": 0.011515185571079289,
+          "clean_same_angle_projection_rmse": 0.00567669598859664
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009901212877594299,
+          "fit_noisy_projection_rmse": 0.011335370658554557,
+          "clean_same_angle_projection_rmse": 0.004884223908777883
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202610042,
+      "clean_projection_rms": 1.1859823552174151,
+      "actual_noise_rmse": 0.011860199110822492,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011712603505177291,
+          "fit_noisy_projection_rmse": 0.011597975494243021,
+          "clean_same_angle_projection_rmse": 0.005797536448087282
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009809741879048301,
+          "fit_noisy_projection_rmse": 0.011410852006410727,
+          "clean_same_angle_projection_rmse": 0.004995620703245086
+        },
+        "sirt23": {
+          "voxel_rmse": 0.01168902262426726,
+          "fit_noisy_projection_rmse": 0.01152272468217881,
+          "clean_same_angle_projection_rmse": 0.005667746443601662
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009870322489824702,
+          "fit_noisy_projection_rmse": 0.011342797827234264,
+          "clean_same_angle_projection_rmse": 0.004874030207910242
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202610043,
+      "clean_projection_rms": 1.1859823552174151,
+      "actual_noise_rmse": 0.011857042297492328,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011547178273742504,
+          "fit_noisy_projection_rmse": 0.011575436383530265,
+          "clean_same_angle_projection_rmse": 0.005769826160346671
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009610400675184315,
+          "fit_noisy_projection_rmse": 0.011388563198917514,
+          "clean_same_angle_projection_rmse": 0.004964012676672339
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011513339797576521,
+          "fit_noisy_projection_rmse": 0.011499651120396085,
+          "clean_same_angle_projection_rmse": 0.005638973766669109
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009665095067596973,
+          "fit_noisy_projection_rmse": 0.011320292615591442,
+          "clean_same_angle_projection_rmse": 0.004842182770957555
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202610041,
+      "clean_projection_rms": 1.1859823552174151,
+      "actual_noise_rmse": 0.03556583912548133,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.02765857576630341,
+          "fit_noisy_projection_rmse": 0.03311815525639867,
+          "clean_same_angle_projection_rmse": 0.01382537314683642
+        },
+        "model_raw": {
+          "voxel_rmse": 0.024983394069376233,
+          "fit_noisy_projection_rmse": 0.03315826678211735,
+          "clean_same_angle_projection_rmse": 0.012463766331922943
+        },
+        "sirt23": {
+          "voxel_rmse": 0.027885474792874045,
+          "fit_noisy_projection_rmse": 0.033074231137739135,
+          "clean_same_angle_projection_rmse": 0.0138018889137155
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.025356341223171878,
+          "fit_noisy_projection_rmse": 0.033099690738320225,
+          "clean_same_angle_projection_rmse": 0.012434654806829159
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202610042,
+      "clean_projection_rms": 1.1859823552174151,
+      "actual_noise_rmse": 0.0355805973207714,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.02760826287600864,
+          "fit_noisy_projection_rmse": 0.03313760649792062,
+          "clean_same_angle_projection_rmse": 0.013785140352939387
+        },
+        "model_raw": {
+          "voxel_rmse": 0.024953645808403643,
+          "fit_noisy_projection_rmse": 0.03318129862256604,
+          "clean_same_angle_projection_rmse": 0.012429341494683877
+        },
+        "sirt23": {
+          "voxel_rmse": 0.02784242495868852,
+          "fit_noisy_projection_rmse": 0.03309376776471134,
+          "clean_same_angle_projection_rmse": 0.013761279340137959
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.025324694904828894,
+          "fit_noisy_projection_rmse": 0.03312043445023142,
+          "clean_same_angle_projection_rmse": 0.012391312181960634
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202610043,
+      "clean_projection_rms": 1.1859823552174151,
+      "actual_noise_rmse": 0.03557112697307516,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.02703960903062149,
+          "fit_noisy_projection_rmse": 0.03307132166294125,
+          "clean_same_angle_projection_rmse": 0.013686999167009325
+        },
+        "model_raw": {
+          "voxel_rmse": 0.02434079111677575,
+          "fit_noisy_projection_rmse": 0.03311697907206835,
+          "clean_same_angle_projection_rmse": 0.012323169661807751
+        },
+        "sirt23": {
+          "voxel_rmse": 0.02725720836801356,
+          "fit_noisy_projection_rmse": 0.03302612346821988,
+          "clean_same_angle_projection_rmse": 0.013660916100019559
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.02469176869150459,
+          "fit_noisy_projection_rmse": 0.033053903026088086,
+          "clean_same_angle_projection_rmse": 0.012281593450584194
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202610041,
+      "clean_projection_rms": 1.1859823552174151,
+      "actual_noise_rmse": 0.05927639847529551,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04460581833790257,
+          "fit_noisy_projection_rmse": 0.054958065022943564,
+          "clean_same_angle_projection_rmse": 0.022458237414011997
+        },
+        "model_raw": {
+          "voxel_rmse": 0.04069656444390076,
+          "fit_noisy_projection_rmse": 0.05514787413492008,
+          "clean_same_angle_projection_rmse": 0.02055684910291439
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04500877797993363,
+          "fit_noisy_projection_rmse": 0.05490857826758055,
+          "clean_same_angle_projection_rmse": 0.022475524781676356
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.0413223389263205,
+          "fit_noisy_projection_rmse": 0.0550235832240239,
+          "clean_same_angle_projection_rmse": 0.020431630057864695
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202610042,
+      "clean_projection_rms": 1.1859823552174151,
+      "actual_noise_rmse": 0.05930099550471853,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.044507191201593486,
+          "fit_noisy_projection_rmse": 0.05498845623159717,
+          "clean_same_angle_projection_rmse": 0.022385108932617494
+        },
+        "model_raw": {
+          "voxel_rmse": 0.040637381148058226,
+          "fit_noisy_projection_rmse": 0.055184076005357525,
+          "clean_same_angle_projection_rmse": 0.020494964822949345
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04492044538354937,
+          "fit_noisy_projection_rmse": 0.054939116978793376,
+          "clean_same_angle_projection_rmse": 0.022401994364938834
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.041254908197271234,
+          "fit_noisy_projection_rmse": 0.05505631796534105,
+          "clean_same_angle_projection_rmse": 0.020354425165794048
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202610043,
+      "clean_projection_rms": 1.1859823552174151,
+      "actual_noise_rmse": 0.059285211620350546,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04357589086013872,
+          "fit_noisy_projection_rmse": 0.05488005174658872,
+          "clean_same_angle_projection_rmse": 0.02222050390256279
+        },
+        "model_raw": {
+          "voxel_rmse": 0.039649229373168476,
+          "fit_noisy_projection_rmse": 0.055080095914715334,
+          "clean_same_angle_projection_rmse": 0.020321346650924287
+        },
+        "sirt23": {
+          "voxel_rmse": 0.043964149411185593,
+          "fit_noisy_projection_rmse": 0.054828889616569204,
+          "clean_same_angle_projection_rmse": 0.022234661888016
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.040232444931620995,
+          "fit_noisy_projection_rmse": 0.05494752220277715,
+          "clean_same_angle_projection_rmse": 0.02017151820853342
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.0,
+      "seed": 202611041,
+      "clean_projection_rms": 1.1870418039263035,
+      "actual_noise_rmse": 0.0,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.007116367239508137,
+          "fit_noisy_projection_rmse": 0.003704375622190921,
+          "clean_same_angle_projection_rmse": 0.003704375622190921
+        },
+        "model_raw": {
+          "voxel_rmse": 0.0046916603387739154,
+          "fit_noisy_projection_rmse": 0.002939178737048686,
+          "clean_same_angle_projection_rmse": 0.002939178737048686
+        },
+        "sirt23": {
+          "voxel_rmse": 0.006878219028885598,
+          "fit_noisy_projection_rmse": 0.0034759129022883177,
+          "clean_same_angle_projection_rmse": 0.0034759129022883177
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.0044764840204285835,
+          "fit_noisy_projection_rmse": 0.0026915977298306295,
+          "clean_same_angle_projection_rmse": 0.0026915977298306295
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202611041,
+      "clean_projection_rms": 1.1870418039263035,
+      "actual_noise_rmse": 0.011866728197969972,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011827199853427419,
+          "fit_noisy_projection_rmse": 0.011615747597068994,
+          "clean_same_angle_projection_rmse": 0.005819210070109348
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009940945228413657,
+          "fit_noisy_projection_rmse": 0.011423818588237211,
+          "clean_same_angle_projection_rmse": 0.005014813677722502
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011798002259446161,
+          "fit_noisy_projection_rmse": 0.011540735323352069,
+          "clean_same_angle_projection_rmse": 0.005690132867360052
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009999476733278381,
+          "fit_noisy_projection_rmse": 0.011356088536842135,
+          "clean_same_angle_projection_rmse": 0.0048957161787579456
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202611042,
+      "clean_projection_rms": 1.1870418039263035,
+      "actual_noise_rmse": 0.011867066575334907,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011593204259306567,
+          "fit_noisy_projection_rmse": 0.011584556424039459,
+          "clean_same_angle_projection_rmse": 0.005775527877967158
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009663653422683173,
+          "fit_noisy_projection_rmse": 0.011396045966346498,
+          "clean_same_angle_projection_rmse": 0.004967598478969916
+        },
+        "sirt23": {
+          "voxel_rmse": 0.01155710656744012,
+          "fit_noisy_projection_rmse": 0.011508747975400321,
+          "clean_same_angle_projection_rmse": 0.005644105708120818
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009712897295801258,
+          "fit_noisy_projection_rmse": 0.01132744836559691,
+          "clean_same_angle_projection_rmse": 0.004844871243698552
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202611043,
+      "clean_projection_rms": 1.1870418039263035,
+      "actual_noise_rmse": 0.01187779671822315,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011742626088955557,
+          "fit_noisy_projection_rmse": 0.011618998208152459,
+          "clean_same_angle_projection_rmse": 0.005814893393209402
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009823789893521468,
+          "fit_noisy_projection_rmse": 0.011426779669283725,
+          "clean_same_angle_projection_rmse": 0.005007682090429667
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011710688568816782,
+          "fit_noisy_projection_rmse": 0.011543580498407148,
+          "clean_same_angle_projection_rmse": 0.005684905671430281
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009887000435134337,
+          "fit_noisy_projection_rmse": 0.01135925532560014,
+          "clean_same_angle_projection_rmse": 0.004888857274876276
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202611041,
+      "clean_projection_rms": 1.1870418039263035,
+      "actual_noise_rmse": 0.03560018460892844,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.02780545664662356,
+          "fit_noisy_projection_rmse": 0.03318754964702841,
+          "clean_same_angle_projection_rmse": 0.013846387730180742
+        },
+        "model_raw": {
+          "voxel_rmse": 0.025172942417351064,
+          "fit_noisy_projection_rmse": 0.0332222306945865,
+          "clean_same_angle_projection_rmse": 0.012496001037954261
+        },
+        "sirt23": {
+          "voxel_rmse": 0.028033415954437053,
+          "fit_noisy_projection_rmse": 0.03314365190074984,
+          "clean_same_angle_projection_rmse": 0.013822601662371661
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.025545014147786645,
+          "fit_noisy_projection_rmse": 0.03316325699021209,
+          "clean_same_angle_projection_rmse": 0.01246823086480662
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202611042,
+      "clean_projection_rms": 1.1870418039263035,
+      "actual_noise_rmse": 0.035601199736503816,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.02713220105545592,
+          "fit_noisy_projection_rmse": 0.033100357017818605,
+          "clean_same_angle_projection_rmse": 0.013699534094348731
+        },
+        "model_raw": {
+          "voxel_rmse": 0.024452726267747575,
+          "fit_noisy_projection_rmse": 0.033143972466173115,
+          "clean_same_angle_projection_rmse": 0.012344139910990632
+        },
+        "sirt23": {
+          "voxel_rmse": 0.02735042806872238,
+          "fit_noisy_projection_rmse": 0.033055769721049774,
+          "clean_same_angle_projection_rmse": 0.013674153167260323
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.02479763954640955,
+          "fit_noisy_projection_rmse": 0.03308159553193484,
+          "clean_same_angle_projection_rmse": 0.012304307363375108
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202611043,
+      "clean_projection_rms": 1.1870418039263035,
+      "actual_noise_rmse": 0.03563339020986289,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.027611611443882904,
+          "fit_noisy_projection_rmse": 0.033198639612627895,
+          "clean_same_angle_projection_rmse": 0.013833410366603247
+        },
+        "model_raw": {
+          "voxel_rmse": 0.024923509096620146,
+          "fit_noisy_projection_rmse": 0.03323260242919367,
+          "clean_same_angle_projection_rmse": 0.012472314468565874
+        },
+        "sirt23": {
+          "voxel_rmse": 0.02783740155895577,
+          "fit_noisy_projection_rmse": 0.033154416606502396,
+          "clean_same_angle_projection_rmse": 0.013808913056728796
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.025309935422818543,
+          "fit_noisy_projection_rmse": 0.03317431001975861,
+          "clean_same_angle_projection_rmse": 0.012447848184145432
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202611041,
+      "clean_projection_rms": 1.1870418039263035,
+      "actual_noise_rmse": 0.059333641002671494,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.044819425027422005,
+          "fit_noisy_projection_rmse": 0.055071556955457415,
+          "clean_same_angle_projection_rmse": 0.02248404892131093
+        },
+        "model_raw": {
+          "voxel_rmse": 0.040978233681256256,
+          "fit_noisy_projection_rmse": 0.05525185908182987,
+          "clean_same_angle_projection_rmse": 0.020595660541915632
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04522270469112335,
+          "fit_noisy_projection_rmse": 0.05502190356780476,
+          "clean_same_angle_projection_rmse": 0.022500391773419615
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.041602026714170924,
+          "fit_noisy_projection_rmse": 0.055129212938069286,
+          "clean_same_angle_projection_rmse": 0.020480732248582958
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202611042,
+      "clean_projection_rms": 1.1870418039263035,
+      "actual_noise_rmse": 0.05933533286047951,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04372381786569328,
+          "fit_noisy_projection_rmse": 0.05492957862102436,
+          "clean_same_angle_projection_rmse": 0.02224181057585619
+        },
+        "model_raw": {
+          "voxel_rmse": 0.03982397437934031,
+          "fit_noisy_projection_rmse": 0.05512450724934463,
+          "clean_same_angle_projection_rmse": 0.020353479449623842
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04411173629588859,
+          "fit_noisy_projection_rmse": 0.05487891211994592,
+          "clean_same_angle_projection_rmse": 0.022256719538416816
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.040399081479073076,
+          "fit_noisy_projection_rmse": 0.054994380025111075,
+          "clean_same_angle_projection_rmse": 0.020210677416984384
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202611043,
+      "clean_projection_rms": 1.1870418039263035,
+      "actual_noise_rmse": 0.05938898370389758,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04451544981769283,
+          "fit_noisy_projection_rmse": 0.05509025107465665,
+          "clean_same_angle_projection_rmse": 0.02246421514093833
+        },
+        "model_raw": {
+          "voxel_rmse": 0.040597302407601274,
+          "fit_noisy_projection_rmse": 0.055269963869425884,
+          "clean_same_angle_projection_rmse": 0.02055713992949531
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04491294370420922,
+          "fit_noisy_projection_rmse": 0.0550399932295308,
+          "clean_same_angle_projection_rmse": 0.022479486475235518
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.04123721486367401,
+          "fit_noisy_projection_rmse": 0.055147468699182065,
+          "clean_same_angle_projection_rmse": 0.020446979284041215
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.0,
+      "seed": 202612041,
+      "clean_projection_rms": 1.1795393538928185,
+      "actual_noise_rmse": 0.0,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.007079472694137642,
+          "fit_noisy_projection_rmse": 0.003699405813509723,
+          "clean_same_angle_projection_rmse": 0.003699405813509723
+        },
+        "model_raw": {
+          "voxel_rmse": 0.004600528273679812,
+          "fit_noisy_projection_rmse": 0.0028933927007364964,
+          "clean_same_angle_projection_rmse": 0.0028933927007364964
+        },
+        "sirt23": {
+          "voxel_rmse": 0.006840811057576128,
+          "fit_noisy_projection_rmse": 0.003471580818591797,
+          "clean_same_angle_projection_rmse": 0.003471580818591797
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.004386532939484759,
+          "fit_noisy_projection_rmse": 0.0026453079034629546,
+          "clean_same_angle_projection_rmse": 0.0026453079034629546
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202612041,
+      "clean_projection_rms": 1.1795393538928185,
+      "actual_noise_rmse": 0.011795095266495735,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011833597939855084,
+          "fit_noisy_projection_rmse": 0.011559982330964422,
+          "clean_same_angle_projection_rmse": 0.005819290016332315
+        },
+        "model_raw": {
+          "voxel_rmse": 0.00991753736744088,
+          "fit_noisy_projection_rmse": 0.011357131009549944,
+          "clean_same_angle_projection_rmse": 0.004982468724839086
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011809770411680017,
+          "fit_noisy_projection_rmse": 0.011484943923292237,
+          "clean_same_angle_projection_rmse": 0.0056908114223041826
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009985993066594714,
+          "fit_noisy_projection_rmse": 0.011289917628640626,
+          "clean_same_angle_projection_rmse": 0.004864899343268054
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202612042,
+      "clean_projection_rms": 1.1795393538928185,
+      "actual_noise_rmse": 0.011796575302795792,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011711969066131991,
+          "fit_noisy_projection_rmse": 0.011549181536608895,
+          "clean_same_angle_projection_rmse": 0.00579289855364853
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009783904137115806,
+          "fit_noisy_projection_rmse": 0.011345287531223838,
+          "clean_same_angle_projection_rmse": 0.004959276687618588
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011684121949132712,
+          "fit_noisy_projection_rmse": 0.011473718826230056,
+          "clean_same_angle_projection_rmse": 0.005663538762978051
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009849763744633016,
+          "fit_noisy_projection_rmse": 0.011277878684044201,
+          "clean_same_angle_projection_rmse": 0.004839645969942141
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202612043,
+      "clean_projection_rms": 1.1795393538928185,
+      "actual_noise_rmse": 0.01179286849378689,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011788076877526203,
+          "fit_noisy_projection_rmse": 0.011559192656232297,
+          "clean_same_angle_projection_rmse": 0.005813884700463691
+        },
+        "model_raw": {
+          "voxel_rmse": 0.0098746931947293,
+          "fit_noisy_projection_rmse": 0.011354241752198109,
+          "clean_same_angle_projection_rmse": 0.004979893973089527
+        },
+        "sirt23": {
+          "voxel_rmse": 0.01176476548744948,
+          "fit_noisy_projection_rmse": 0.011484066481214562,
+          "clean_same_angle_projection_rmse": 0.005685406225493661
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009946048163697997,
+          "fit_noisy_projection_rmse": 0.01128698077920471,
+          "clean_same_angle_projection_rmse": 0.004860829803788629
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202612041,
+      "clean_projection_rms": 1.1795393538928185,
+      "actual_noise_rmse": 0.03538528578487564,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.028061204204498594,
+          "fit_noisy_projection_rmse": 0.03301693685225555,
+          "clean_same_angle_projection_rmse": 0.013864207973750757
+        },
+        "model_raw": {
+          "voxel_rmse": 0.025414365780548207,
+          "fit_noisy_projection_rmse": 0.03305414805031523,
+          "clean_same_angle_projection_rmse": 0.012489980840483183
+        },
+        "sirt23": {
+          "voxel_rmse": 0.028306116890724042,
+          "fit_noisy_projection_rmse": 0.03297469790789888,
+          "clean_same_angle_projection_rmse": 0.013844235335252548
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.02580836644589129,
+          "fit_noisy_projection_rmse": 0.03299540188656884,
+          "clean_same_angle_projection_rmse": 0.012464077665115113
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202612042,
+      "clean_projection_rms": 1.1795393538928185,
+      "actual_noise_rmse": 0.0353897259559184,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.027555834031686335,
+          "fit_noisy_projection_rmse": 0.0329785905731048,
+          "clean_same_angle_projection_rmse": 0.013765319876138963
+        },
+        "model_raw": {
+          "voxel_rmse": 0.02488708298681065,
+          "fit_noisy_projection_rmse": 0.03301404121211627,
+          "clean_same_angle_projection_rmse": 0.012402779785370244
+        },
+        "sirt23": {
+          "voxel_rmse": 0.0277793689473484,
+          "fit_noisy_projection_rmse": 0.03293438992987504,
+          "clean_same_angle_projection_rmse": 0.0137417900736968
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.025260081197608017,
+          "fit_noisy_projection_rmse": 0.03295389718505313,
+          "clean_same_angle_projection_rmse": 0.012369162561430535
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202612043,
+      "clean_projection_rms": 1.1795393538928185,
+      "actual_noise_rmse": 0.03537860548929048,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.02787866503333119,
+          "fit_noisy_projection_rmse": 0.03300663315796524,
+          "clean_same_angle_projection_rmse": 0.013843562104319296
+        },
+        "model_raw": {
+          "voxel_rmse": 0.025236873431794826,
+          "fit_noisy_projection_rmse": 0.0330416843491955,
+          "clean_same_angle_projection_rmse": 0.012484331063181415
+        },
+        "sirt23": {
+          "voxel_rmse": 0.028112807016497716,
+          "fit_noisy_projection_rmse": 0.032963318995612376,
+          "clean_same_angle_projection_rmse": 0.013821535218916834
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.025623394557428906,
+          "fit_noisy_projection_rmse": 0.03298169517447159,
+          "clean_same_angle_projection_rmse": 0.012449612650362122
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202612041,
+      "clean_projection_rms": 1.1795393538928185,
+      "actual_noise_rmse": 0.05897547631665824,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.045269684008061764,
+          "fit_noisy_projection_rmse": 0.05478588063324265,
+          "clean_same_angle_projection_rmse": 0.022518674681416585
+        },
+        "model_raw": {
+          "voxel_rmse": 0.04141166967323048,
+          "fit_noisy_projection_rmse": 0.0549744588688242,
+          "clean_same_angle_projection_rmse": 0.02060377857036203
+        },
+        "sirt23": {
+          "voxel_rmse": 0.045697445220038733,
+          "fit_noisy_projection_rmse": 0.0547389013562281,
+          "clean_same_angle_projection_rmse": 0.02254086994679672
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.04206641811433103,
+          "fit_noisy_projection_rmse": 0.054851275063744834,
+          "clean_same_angle_projection_rmse": 0.020490216626697453
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202612042,
+      "clean_projection_rms": 1.1795393538928185,
+      "actual_noise_rmse": 0.0589828765939715,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04441263623739872,
+          "fit_noisy_projection_rmse": 0.05472041951948709,
+          "clean_same_angle_projection_rmse": 0.02234982019484503
+        },
+        "model_raw": {
+          "voxel_rmse": 0.04052634029877022,
+          "fit_noisy_projection_rmse": 0.054906410899071105,
+          "clean_same_angle_projection_rmse": 0.020456379274835877
+        },
+        "sirt23": {
+          "voxel_rmse": 0.044804759418098035,
+          "fit_noisy_projection_rmse": 0.05467011137525497,
+          "clean_same_angle_projection_rmse": 0.02236568011572172
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.041144948220742626,
+          "fit_noisy_projection_rmse": 0.05478147518539896,
+          "clean_same_angle_projection_rmse": 0.02032835038855153
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202612043,
+      "clean_projection_rms": 1.1795393538928185,
+      "actual_noise_rmse": 0.05896434248709011,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04496505786758203,
+          "fit_noisy_projection_rmse": 0.05476626121402441,
+          "clean_same_angle_projection_rmse": 0.02248476071489566
+        },
+        "model_raw": {
+          "voxel_rmse": 0.041114191894821454,
+          "fit_noisy_projection_rmse": 0.054952532873414325,
+          "clean_same_angle_projection_rmse": 0.020598243714289734
+        },
+        "sirt23": {
+          "voxel_rmse": 0.045375928436697764,
+          "fit_noisy_projection_rmse": 0.05471748086344453,
+          "clean_same_angle_projection_rmse": 0.022503542635114428
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.04175736442999051,
+          "fit_noisy_projection_rmse": 0.054827811358569394,
+          "clean_same_angle_projection_rmse": 0.0204675719247746
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.0,
+      "seed": 202613041,
+      "clean_projection_rms": 1.1665877718469584,
+      "actual_noise_rmse": 0.0,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.007059084941589698,
+          "fit_noisy_projection_rmse": 0.003668696453042712,
+          "clean_same_angle_projection_rmse": 0.003668696453042712
+        },
+        "model_raw": {
+          "voxel_rmse": 0.004689857837786402,
+          "fit_noisy_projection_rmse": 0.002927529191598684,
+          "clean_same_angle_projection_rmse": 0.002927529191598684
+        },
+        "sirt23": {
+          "voxel_rmse": 0.006823940419374778,
+          "fit_noisy_projection_rmse": 0.0034437802281930417,
+          "clean_same_angle_projection_rmse": 0.0034437802281930417
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.0044755039491830954,
+          "fit_noisy_projection_rmse": 0.0026830499001378842,
+          "clean_same_angle_projection_rmse": 0.0026830499001378842
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202613041,
+      "clean_projection_rms": 1.1665877718469584,
+      "actual_noise_rmse": 0.011671398793101648,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011713889005841324,
+          "fit_noisy_projection_rmse": 0.011438629905842015,
+          "clean_same_angle_projection_rmse": 0.005760877453481899
+        },
+        "model_raw": {
+          "voxel_rmse": 0.00985122450411154,
+          "fit_noisy_projection_rmse": 0.011249721086348441,
+          "clean_same_angle_projection_rmse": 0.00497708615191869
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011687975106031048,
+          "fit_noisy_projection_rmse": 0.01136429244140238,
+          "clean_same_angle_projection_rmse": 0.005633773486426939
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009918059884038375,
+          "fit_noisy_projection_rmse": 0.011182627059883769,
+          "clean_same_angle_projection_rmse": 0.00485903267179089
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202613042,
+      "clean_projection_rms": 1.1665877718469584,
+      "actual_noise_rmse": 0.011662013877747884,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011711773187186872,
+          "fit_noisy_projection_rmse": 0.011428512427777622,
+          "clean_same_angle_projection_rmse": 0.005758023406293785
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009849877534911781,
+          "fit_noisy_projection_rmse": 0.011240363453136067,
+          "clean_same_angle_projection_rmse": 0.004973546293004565
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011682615981317748,
+          "fit_noisy_projection_rmse": 0.01135397731623311,
+          "clean_same_angle_projection_rmse": 0.0056304789378492665
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009911836560342953,
+          "fit_noisy_projection_rmse": 0.011172794102490897,
+          "clean_same_angle_projection_rmse": 0.004854364478125585
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202613043,
+      "clean_projection_rms": 1.1665877718469584,
+      "actual_noise_rmse": 0.011659427291915686,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011642164282983937,
+          "fit_noisy_projection_rmse": 0.011415855649061625,
+          "clean_same_angle_projection_rmse": 0.005739577168274079
+        },
+        "model_raw": {
+          "voxel_rmse": 0.00977090972965841,
+          "fit_noisy_projection_rmse": 0.011227724260555662,
+          "clean_same_angle_projection_rmse": 0.004949533115046862
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011617061337492528,
+          "fit_noisy_projection_rmse": 0.011341065000384095,
+          "clean_same_angle_projection_rmse": 0.005611356116792832
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009832977079038695,
+          "fit_noisy_projection_rmse": 0.011159734112818644,
+          "clean_same_angle_projection_rmse": 0.004829273588494459
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202613041,
+      "clean_projection_rms": 1.1665877718469584,
+      "actual_noise_rmse": 0.03501419639092458,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.027540635683722944,
+          "fit_noisy_projection_rmse": 0.03265817011089725,
+          "clean_same_angle_projection_rmse": 0.013702740673747523
+        },
+        "model_raw": {
+          "voxel_rmse": 0.024919753496684866,
+          "fit_noisy_projection_rmse": 0.03268967939424945,
+          "clean_same_angle_projection_rmse": 0.012377361190366759
+        },
+        "sirt23": {
+          "voxel_rmse": 0.02776568908518879,
+          "fit_noisy_projection_rmse": 0.032614817972833124,
+          "clean_same_angle_projection_rmse": 0.013679666161380097
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.025307985884437022,
+          "fit_noisy_projection_rmse": 0.03263359578154707,
+          "clean_same_angle_projection_rmse": 0.012353891425618248
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202613042,
+      "clean_projection_rms": 1.1665877718469584,
+      "actual_noise_rmse": 0.034986041634650716,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.027492406620227654,
+          "fit_noisy_projection_rmse": 0.03262646758905423,
+          "clean_same_angle_projection_rmse": 0.013692378207122774
+        },
+        "model_raw": {
+          "voxel_rmse": 0.024876627865258138,
+          "fit_noisy_projection_rmse": 0.03266208340521196,
+          "clean_same_angle_projection_rmse": 0.012368340268431146
+        },
+        "sirt23": {
+          "voxel_rmse": 0.027713057247689472,
+          "fit_noisy_projection_rmse": 0.03258271977760325,
+          "clean_same_angle_projection_rmse": 0.013668252600951378
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.0252521308650833,
+          "fit_noisy_projection_rmse": 0.03260343942846427,
+          "clean_same_angle_projection_rmse": 0.012336849979168826
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202613043,
+      "clean_projection_rms": 1.1665877718469584,
+      "actual_noise_rmse": 0.03497828189225637,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.027257921232432047,
+          "fit_noisy_projection_rmse": 0.0325845498352909,
+          "clean_same_angle_projection_rmse": 0.013611096821506536
+        },
+        "model_raw": {
+          "voxel_rmse": 0.02463412644362283,
+          "fit_noisy_projection_rmse": 0.032621446755005626,
+          "clean_same_angle_projection_rmse": 0.01227573971253938
+        },
+        "sirt23": {
+          "voxel_rmse": 0.02748588948115063,
+          "fit_noisy_projection_rmse": 0.0325407366549985,
+          "clean_same_angle_projection_rmse": 0.01358713835529209
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.025004473438029855,
+          "fit_noisy_projection_rmse": 0.032562171298162544,
+          "clean_same_angle_projection_rmse": 0.012243870459921917
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202613041,
+      "clean_projection_rms": 1.1665877718469584,
+      "actual_noise_rmse": 0.0583569939580056,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.044387180037068256,
+          "fit_noisy_projection_rmse": 0.05418854867656283,
+          "clean_same_angle_projection_rmse": 0.02224994998688369
+        },
+        "model_raw": {
+          "voxel_rmse": 0.040563042660211136,
+          "fit_noisy_projection_rmse": 0.05435869974172917,
+          "clean_same_angle_projection_rmse": 0.02038971366138938
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04478506153786833,
+          "fit_noisy_projection_rmse": 0.05413974962994682,
+          "clean_same_angle_projection_rmse": 0.022267061548137165
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.04121080034922754,
+          "fit_noisy_projection_rmse": 0.0542442738273997,
+          "clean_same_angle_projection_rmse": 0.020291626181616965
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202613042,
+      "clean_projection_rms": 1.1665877718469584,
+      "actual_noise_rmse": 0.0583100693967507,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04427956831215027,
+          "fit_noisy_projection_rmse": 0.05413374639600728,
+          "clean_same_angle_projection_rmse": 0.022229255119029713
+        },
+        "model_raw": {
+          "voxel_rmse": 0.04046354988601012,
+          "fit_noisy_projection_rmse": 0.05431233153205656,
+          "clean_same_angle_projection_rmse": 0.02037523095101295
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04466647950506509,
+          "fit_noisy_projection_rmse": 0.05408376645237275,
+          "clean_same_angle_projection_rmse": 0.02224348679192737
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.041085056508294124,
+          "fit_noisy_projection_rmse": 0.054191987676740855,
+          "clean_same_angle_projection_rmse": 0.020257091169788376
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202613043,
+      "clean_projection_rms": 1.1665877718469584,
+      "actual_noise_rmse": 0.058297136518742285,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04390199944108338,
+          "fit_noisy_projection_rmse": 0.054064571073413274,
+          "clean_same_angle_projection_rmse": 0.02209052837283943
+        },
+        "model_raw": {
+          "voxel_rmse": 0.04007481691291746,
+          "fit_noisy_projection_rmse": 0.05424504305441352,
+          "clean_same_angle_projection_rmse": 0.02021972407734351
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04430027001967507,
+          "fit_noisy_projection_rmse": 0.05401528973428141,
+          "clean_same_angle_projection_rmse": 0.022107155069484588
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.040688821425969614,
+          "fit_noisy_projection_rmse": 0.05412443442919198,
+          "clean_same_angle_projection_rmse": 0.020103862151993616
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.0,
+      "seed": 202614041,
+      "clean_projection_rms": 1.1926191976994382,
+      "actual_noise_rmse": 0.0,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.007137471530144252,
+          "fit_noisy_projection_rmse": 0.003714630157908573,
+          "clean_same_angle_projection_rmse": 0.003714630157908573
+        },
+        "model_raw": {
+          "voxel_rmse": 0.004688546769618241,
+          "fit_noisy_projection_rmse": 0.002946322061384619,
+          "clean_same_angle_projection_rmse": 0.002946322061384619
+        },
+        "sirt23": {
+          "voxel_rmse": 0.006897826364756287,
+          "fit_noisy_projection_rmse": 0.0034860013746955175,
+          "clean_same_angle_projection_rmse": 0.0034860013746955175
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.0044703946025656666,
+          "fit_noisy_projection_rmse": 0.0026960562863011673,
+          "clean_same_angle_projection_rmse": 0.0026960562863011673
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202614041,
+      "clean_projection_rms": 1.1926191976994382,
+      "actual_noise_rmse": 0.011920674665683223,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011724908710683673,
+          "fit_noisy_projection_rmse": 0.011645162484617076,
+          "clean_same_angle_projection_rmse": 0.005804458082505991
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009797878594232331,
+          "fit_noisy_projection_rmse": 0.01145379657836737,
+          "clean_same_angle_projection_rmse": 0.004988148194790782
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011694685523996945,
+          "fit_noisy_projection_rmse": 0.011569316103880302,
+          "clean_same_angle_projection_rmse": 0.005673766214095363
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009853616025078178,
+          "fit_noisy_projection_rmse": 0.011384581873269418,
+          "clean_same_angle_projection_rmse": 0.004864928153219139
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202614042,
+      "clean_projection_rms": 1.1926191976994382,
+      "actual_noise_rmse": 0.011920968441850371,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011752210481795648,
+          "fit_noisy_projection_rmse": 0.011643489248898124,
+          "clean_same_angle_projection_rmse": 0.00580901804120873
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009823677224780863,
+          "fit_noisy_projection_rmse": 0.011453955760913096,
+          "clean_same_angle_projection_rmse": 0.004992436741842917
+        },
+        "sirt23": {
+          "voxel_rmse": 0.01172405551351882,
+          "fit_noisy_projection_rmse": 0.011567995860092798,
+          "clean_same_angle_projection_rmse": 0.005678538750155092
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.00988123637394771,
+          "fit_noisy_projection_rmse": 0.011384593734535532,
+          "clean_same_angle_projection_rmse": 0.004868319385750102
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202614043,
+      "clean_projection_rms": 1.1926191976994382,
+      "actual_noise_rmse": 0.01192879382142872,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011900836811888381,
+          "fit_noisy_projection_rmse": 0.011677612012256349,
+          "clean_same_angle_projection_rmse": 0.005854479426502453
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009994932064694203,
+          "fit_noisy_projection_rmse": 0.011483188991624305,
+          "clean_same_angle_projection_rmse": 0.005039562612859318
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011878983715795852,
+          "fit_noisy_projection_rmse": 0.011602454261004449,
+          "clean_same_angle_projection_rmse": 0.005725640401856664
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.010065643917708632,
+          "fit_noisy_projection_rmse": 0.011415311942000498,
+          "clean_same_angle_projection_rmse": 0.004920505373601871
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202614041,
+      "clean_projection_rms": 1.1926191976994382,
+      "actual_noise_rmse": 0.03576202407665395,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.02742453500867476,
+          "fit_noisy_projection_rmse": 0.033266988119078314,
+          "clean_same_angle_projection_rmse": 0.013775184656752698
+        },
+        "model_raw": {
+          "voxel_rmse": 0.024722338128217045,
+          "fit_noisy_projection_rmse": 0.03330991253392348,
+          "clean_same_angle_projection_rmse": 0.012399343203159939
+        },
+        "sirt23": {
+          "voxel_rmse": 0.027647934338755266,
+          "fit_noisy_projection_rmse": 0.033221995385657524,
+          "clean_same_angle_projection_rmse": 0.013750098739131687
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.02508175737576262,
+          "fit_noisy_projection_rmse": 0.033247118294671966,
+          "clean_same_angle_projection_rmse": 0.01236181449818499
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202614042,
+      "clean_projection_rms": 1.1926191976994382,
+      "actual_noise_rmse": 0.0357629053565619,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.027514059692816176,
+          "fit_noisy_projection_rmse": 0.033269944400116866,
+          "clean_same_angle_projection_rmse": 0.013791574565360688
+        },
+        "model_raw": {
+          "voxel_rmse": 0.024813313395135525,
+          "fit_noisy_projection_rmse": 0.03331590494918335,
+          "clean_same_angle_projection_rmse": 0.012413624538951286
+        },
+        "sirt23": {
+          "voxel_rmse": 0.027743003663157222,
+          "fit_noisy_projection_rmse": 0.03322551571244745,
+          "clean_same_angle_projection_rmse": 0.013767151228477863
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.025174304568053835,
+          "fit_noisy_projection_rmse": 0.033252300658835894,
+          "clean_same_angle_projection_rmse": 0.012373972497416851
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202614043,
+      "clean_projection_rms": 1.1926191976994382,
+      "actual_noise_rmse": 0.03578638153323116,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.028117168593520887,
+          "fit_noisy_projection_rmse": 0.03336688682150204,
+          "clean_same_angle_projection_rmse": 0.013959186246874719
+        },
+        "model_raw": {
+          "voxel_rmse": 0.025445443998060084,
+          "fit_noisy_projection_rmse": 0.03340174419434835,
+          "clean_same_angle_projection_rmse": 0.012592008177086684
+        },
+        "sirt23": {
+          "voxel_rmse": 0.02835415543915012,
+          "fit_noisy_projection_rmse": 0.033323222535318935,
+          "clean_same_angle_projection_rmse": 0.013937128303287466
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.02584154565074427,
+          "fit_noisy_projection_rmse": 0.03334417498348907,
+          "clean_same_angle_projection_rmse": 0.012567710608338977
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202614041,
+      "clean_projection_rms": 1.1926191976994382,
+      "actual_noise_rmse": 0.059603373471138914,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04418605827917263,
+          "fit_noisy_projection_rmse": 0.05520254517209493,
+          "clean_same_angle_projection_rmse": 0.02236443264176828
+        },
+        "model_raw": {
+          "voxel_rmse": 0.04024365498787199,
+          "fit_noisy_projection_rmse": 0.05540111954202778,
+          "clean_same_angle_projection_rmse": 0.020449138979953953
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04458459606920862,
+          "fit_noisy_projection_rmse": 0.05515169434721713,
+          "clean_same_angle_projection_rmse": 0.022380335251447753
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.040847737002971604,
+          "fit_noisy_projection_rmse": 0.055269323531161325,
+          "clean_same_angle_projection_rmse": 0.020308916341519174
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202614042,
+      "clean_projection_rms": 1.1926191976994382,
+      "actual_noise_rmse": 0.0596048422451678,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04432612631361729,
+          "fit_noisy_projection_rmse": 0.05520990148999924,
+          "clean_same_angle_projection_rmse": 0.022392874091771955
+        },
+        "model_raw": {
+          "voxel_rmse": 0.040390304713542644,
+          "fit_noisy_projection_rmse": 0.05541207145314849,
+          "clean_same_angle_projection_rmse": 0.020474067141095897
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04472839557206801,
+          "fit_noisy_projection_rmse": 0.055159555214213736,
+          "clean_same_angle_projection_rmse": 0.02240929241834655
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.0409915664544093,
+          "fit_noisy_projection_rmse": 0.05527884955827232,
+          "clean_same_angle_projection_rmse": 0.020331340389417477
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202614043,
+      "clean_projection_rms": 1.1926191976994382,
+      "actual_noise_rmse": 0.0596439691975477,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04533695086646402,
+          "fit_noisy_projection_rmse": 0.055367529651372864,
+          "clean_same_angle_projection_rmse": 0.022676347403188916
+        },
+        "model_raw": {
+          "voxel_rmse": 0.04143967243801282,
+          "fit_noisy_projection_rmse": 0.055551433141928515,
+          "clean_same_angle_projection_rmse": 0.020772717205139086
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04575111309159246,
+          "fit_noisy_projection_rmse": 0.05531806401090296,
+          "clean_same_angle_projection_rmse": 0.02269513980512964
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.04209593182727425,
+          "fit_noisy_projection_rmse": 0.05542951473510839,
+          "clean_same_angle_projection_rmse": 0.020657342515972392
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.0,
+      "seed": 202615041,
+      "clean_projection_rms": 1.1795075046067343,
+      "actual_noise_rmse": 0.0,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.00702614234167452,
+          "fit_noisy_projection_rmse": 0.0036549174299392575,
+          "clean_same_angle_projection_rmse": 0.0036549174299392575
+        },
+        "model_raw": {
+          "voxel_rmse": 0.004649459774342802,
+          "fit_noisy_projection_rmse": 0.002894124519425272,
+          "clean_same_angle_projection_rmse": 0.002894124519425272
+        },
+        "sirt23": {
+          "voxel_rmse": 0.006789274699485401,
+          "fit_noisy_projection_rmse": 0.003428342064119004,
+          "clean_same_angle_projection_rmse": 0.003428342064119004
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.004435506871577322,
+          "fit_noisy_projection_rmse": 0.0026491449928418057,
+          "clean_same_angle_projection_rmse": 0.0026491449928418057
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202615041,
+      "clean_projection_rms": 1.1795075046067343,
+      "actual_noise_rmse": 0.011793068172950115,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011438630980850873,
+          "fit_noisy_projection_rmse": 0.011502507436801632,
+          "clean_same_angle_projection_rmse": 0.0057114786490820154
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009531162615397005,
+          "fit_noisy_projection_rmse": 0.01131643158531532,
+          "clean_same_angle_projection_rmse": 0.004904907007891154
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011400702094365743,
+          "fit_noisy_projection_rmse": 0.011427515195336213,
+          "clean_same_angle_projection_rmse": 0.005581504437091622
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009576446154988871,
+          "fit_noisy_projection_rmse": 0.011248249597750094,
+          "clean_same_angle_projection_rmse": 0.004781881660152366
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202615042,
+      "clean_projection_rms": 1.1795075046067343,
+      "actual_noise_rmse": 0.011797999957618968,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011755212034269946,
+          "fit_noisy_projection_rmse": 0.011541892155564596,
+          "clean_same_angle_projection_rmse": 0.005772348871601303
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009901068892395032,
+          "fit_noisy_projection_rmse": 0.011352230839064536,
+          "clean_same_angle_projection_rmse": 0.00496814573929298
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011732300165274354,
+          "fit_noisy_projection_rmse": 0.011467723599523447,
+          "clean_same_angle_projection_rmse": 0.005644824697756347
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009964167438360148,
+          "fit_noisy_projection_rmse": 0.011285581477698807,
+          "clean_same_angle_projection_rmse": 0.004850219995035399
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.01,
+      "seed": 202615043,
+      "clean_projection_rms": 1.1795075046067343,
+      "actual_noise_rmse": 0.011801463191703528,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011525331752902006,
+          "fit_noisy_projection_rmse": 0.011519221721875078,
+          "clean_same_angle_projection_rmse": 0.005729345942082005
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009627633831221786,
+          "fit_noisy_projection_rmse": 0.011332922483550131,
+          "clean_same_angle_projection_rmse": 0.004924486176969143
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011489965906272942,
+          "fit_noisy_projection_rmse": 0.011444484674974074,
+          "clean_same_angle_projection_rmse": 0.00559999824482233
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009682211862925698,
+          "fit_noisy_projection_rmse": 0.01126546389665431,
+          "clean_same_angle_projection_rmse": 0.004804574200502459
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202615041,
+      "clean_projection_rms": 1.1795075046067343,
+      "actual_noise_rmse": 0.035379204504607374,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.026739059829136897,
+          "fit_noisy_projection_rmse": 0.032883521316231526,
+          "clean_same_angle_projection_rmse": 0.013568311302868178
+        },
+        "model_raw": {
+          "voxel_rmse": 0.024050722495726973,
+          "fit_noisy_projection_rmse": 0.03292946928208383,
+          "clean_same_angle_projection_rmse": 0.012210617611335016
+        },
+        "sirt23": {
+          "voxel_rmse": 0.02694698957769398,
+          "fit_noisy_projection_rmse": 0.032838499299047405,
+          "clean_same_angle_projection_rmse": 0.013541934069866627
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.024385163659189208,
+          "fit_noisy_projection_rmse": 0.03286542627843535,
+          "clean_same_angle_projection_rmse": 0.012163528393503984
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202615042,
+      "clean_projection_rms": 1.1795075046067343,
+      "actual_noise_rmse": 0.03539399982056002,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.027754666675229803,
+          "fit_noisy_projection_rmse": 0.03299752357852835,
+          "clean_same_angle_projection_rmse": 0.013770215481929733
+        },
+        "model_raw": {
+          "voxel_rmse": 0.025135975250306652,
+          "fit_noisy_projection_rmse": 0.03303654688502232,
+          "clean_same_angle_projection_rmse": 0.01242191234997836
+        },
+        "sirt23": {
+          "voxel_rmse": 0.027986944783465997,
+          "fit_noisy_projection_rmse": 0.03295428662144845,
+          "clean_same_angle_projection_rmse": 0.01374812051966556
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.025510857524937248,
+          "fit_noisy_projection_rmse": 0.032977613942838914,
+          "clean_same_angle_projection_rmse": 0.012390919600726533
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.03,
+      "seed": 202615043,
+      "clean_projection_rms": 1.1795075046067343,
+      "actual_noise_rmse": 0.0354043895751245,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.02702701607135216,
+          "fit_noisy_projection_rmse": 0.032931674952700225,
+          "clean_same_angle_projection_rmse": 0.01363327087157904
+        },
+        "model_raw": {
+          "voxel_rmse": 0.02434345678228118,
+          "fit_noisy_projection_rmse": 0.03297687201774158,
+          "clean_same_angle_projection_rmse": 0.012270766787302632
+        },
+        "sirt23": {
+          "voxel_rmse": 0.027241447123008435,
+          "fit_noisy_projection_rmse": 0.03288709460149072,
+          "clean_same_angle_projection_rmse": 0.01360785503376892
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.024698549432687653,
+          "fit_noisy_projection_rmse": 0.032914547233710435,
+          "clean_same_angle_projection_rmse": 0.012233717369467557
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202615041,
+      "clean_projection_rms": 1.1795075046067343,
+      "actual_noise_rmse": 0.05896534081307478,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04309262242369156,
+          "fit_noisy_projection_rmse": 0.05457232948538545,
+          "clean_same_angle_projection_rmse": 0.02203520554165593
+        },
+        "model_raw": {
+          "voxel_rmse": 0.03917765351718708,
+          "fit_noisy_projection_rmse": 0.05476995345634132,
+          "clean_same_angle_projection_rmse": 0.02014714171952027
+        },
+        "sirt23": {
+          "voxel_rmse": 0.043466140035040436,
+          "fit_noisy_projection_rmse": 0.054521036208248184,
+          "clean_same_angle_projection_rmse": 0.022048420566019192
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.03973774507987973,
+          "fit_noisy_projection_rmse": 0.05463784740313182,
+          "clean_same_angle_projection_rmse": 0.01999199068899082
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202615042,
+      "clean_projection_rms": 1.1795075046067343,
+      "actual_noise_rmse": 0.058989999630451,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04473358925394897,
+          "fit_noisy_projection_rmse": 0.054758515580961356,
+          "clean_same_angle_projection_rmse": 0.02236674044232141
+        },
+        "model_raw": {
+          "voxel_rmse": 0.04090250570375237,
+          "fit_noisy_projection_rmse": 0.0549446284399285,
+          "clean_same_angle_projection_rmse": 0.020485443292771282
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04513353008131881,
+          "fit_noisy_projection_rmse": 0.05470918783730782,
+          "clean_same_angle_projection_rmse": 0.022383838282997434
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.04152135226818345,
+          "fit_noisy_projection_rmse": 0.054821865412795816,
+          "clean_same_angle_projection_rmse": 0.02036244332614489
+        }
+      }
+    },
+    {
+      "region": {
+        "case_id": "noise_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1472,
+          1600
+        ]
+      },
+      "noise_fraction": 0.05,
+      "seed": 202615043,
+      "clean_projection_rms": 1.1795075046067343,
+      "actual_noise_rmse": 0.05900731600111469,
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04355986692192673,
+          "fit_noisy_projection_rmse": 0.054650446170762326,
+          "clean_same_angle_projection_rmse": 0.02214236948187357
+        },
+        "model_raw": {
+          "voxel_rmse": 0.03963961571724306,
+          "fit_noisy_projection_rmse": 0.054846896609237486,
+          "clean_same_angle_projection_rmse": 0.02023618494912629
+        },
+        "sirt23": {
+          "voxel_rmse": 0.04393990823715679,
+          "fit_noisy_projection_rmse": 0.054599315959087444,
+          "clean_same_angle_projection_rmse": 0.022155816016652185
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.04022936781611999,
+          "fit_noisy_projection_rmse": 0.054717254966358216,
+          "clean_same_angle_projection_rmse": 0.020101423717657635
+        }
+      }
+    }
+  ],
+  "summaries": [
+    {
+      "noise_fraction": 0.0,
+      "evaluations": 6,
+      "mean_metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.00708356860605899,
+          "fit_noisy_projection_rmse": 0.0036896355838855516,
+          "clean_same_angle_projection_rmse": 0.0036896355838855516
+        },
+        "model_raw": {
+          "voxel_rmse": 0.00466340518306728,
+          "fit_noisy_projection_rmse": 0.00292387765896021,
+          "clean_same_angle_projection_rmse": 0.00292387765896021
+        },
+        "sirt23": {
+          "voxel_rmse": 0.006845862364188241,
+          "fit_noisy_projection_rmse": 0.0034621846222461154,
+          "clean_same_angle_projection_rmse": 0.0034621846222461154
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.004447729016190441,
+          "fit_noisy_projection_rmse": 0.002676811431109191,
+          "clean_same_angle_projection_rmse": 0.002676811431109191
+        }
+      },
+      "raw_gain_percent": 34.16587821174771,
+      "hybrid_gain_percent": 35.0304055270349,
+      "hybrid_region_mean_wins": 6
+    },
+    {
+      "noise_fraction": 0.01,
+      "evaluations": 18,
+      "mean_metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.011703540228070363,
+          "fit_noisy_projection_rmse": 0.011559127657540757,
+          "clean_same_angle_projection_rmse": 0.005786031078811329
+        },
+        "model_raw": {
+          "voxel_rmse": 0.009800712767535523,
+          "fit_noisy_projection_rmse": 0.011367543685301703,
+          "clean_same_angle_projection_rmse": 0.004977335542086381
+        },
+        "sirt23": {
+          "voxel_rmse": 0.011675052179634805,
+          "fit_noisy_projection_rmse": 0.011484009936354525,
+          "clean_same_angle_projection_rmse": 0.005656788785744495
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.009861333620588051,
+          "fit_noisy_projection_rmse": 0.011299720456578387,
+          "clean_same_angle_projection_rmse": 0.004857130900480531
+        }
+      },
+      "raw_gain_percent": 16.258562994221204,
+      "hybrid_gain_percent": 15.534993172968303,
+      "hybrid_region_mean_wins": 6
+    },
+    {
+      "noise_fraction": 0.03,
+      "evaluations": 18,
+      "mean_metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.027512160527529188,
+          "fit_noisy_projection_rmse": 0.03302230650008116,
+          "clean_same_angle_projection_rmse": 0.013758549646659374
+        },
+        "model_raw": {
+          "voxel_rmse": 0.024850393823928965,
+          "fit_noisy_projection_rmse": 0.033061604616394555,
+          "clean_same_angle_projection_rmse": 0.012401974357450633
+        },
+        "sirt23": {
+          "voxel_rmse": 0.027738319849751183,
+          "fit_noisy_projection_rmse": 0.03297829199962245,
+          "clean_same_angle_projection_rmse": 0.013734703215551206
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.025220778029798517,
+          "fit_noisy_projection_rmse": 0.03300136516126635,
+          "clean_same_angle_projection_rmse": 0.012368726364497599
+        }
+      },
+      "raw_gain_percent": 9.674873410747974,
+      "hybrid_gain_percent": 9.076042938394657,
+      "hybrid_region_mean_wins": 6
+    },
+    {
+      "noise_fraction": 0.05,
+      "evaluations": 18,
+      "mean_metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.04434438517070047,
+          "fit_noisy_projection_rmse": 0.05479659192864342,
+          "clean_same_angle_projection_rmse": 0.022341937975543773
+        },
+        "model_raw": {
+          "voxel_rmse": 0.04046276132427201,
+          "fit_noisy_projection_rmse": 0.05498521977042857,
+          "clean_same_angle_projection_rmse": 0.020449289113036836
+        },
+        "sirt23": {
+          "voxel_rmse": 0.044743021371650996,
+          "fit_noisy_projection_rmse": 0.0547467525982628,
+          "clean_same_angle_projection_rmse": 0.022358300959415437
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.041079173589418025,
+          "fit_noisy_projection_rmse": 0.054859688789021005,
+          "clean_same_angle_projection_rmse": 0.02032156321138476
+        }
+      },
+      "raw_gain_percent": 8.753360389340003,
+      "hybrid_gain_percent": 8.188646340620998,
+      "hybrid_region_mean_wins": 6
+    }
+  ],
+  "total_seconds": 101.07433370000217,
+  "torch_version": "2.11.0+cu128",
+  "astra_version": "2.5.0",
+  "limitations": [
+    "Gaussian noise is a sensitivity model, not calibrated photon or scanner noise.",
+    "Six regions are within one stack; noise seeds are repeated measurements, not independent specimens.",
+    "Different-specimen independence is unconfirmed.",
+    "TIFF references are reconstructions, not independent physical ground truth.",
+    "Geometry and intensity units are simulation assumptions with matching forward/inverse operators.",
+    "Both projection metrics use the same angles as reconstruction; neither is a held-out projection test.",
+    "No training, tuning, or performance-based selection. These fresh regions become consumed evaluation data."
+  ]
+}

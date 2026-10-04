@@ -1,0 +1,19 @@
+{
+  "Launch_NMC.ps1": "bd9be8cb0e404b702513dd0570931e9c3c70a076e00799565c7c7ee8701601b5",
+  "Launch_Replay.ps1": "114d1d958cc0ee2d462ac787693fbae4851e4f03ab2a952663e0d52cde72d57a",
+  "README.md": "eb9c1f783fe2823bf220b7ed2b25ef983a3c8058a2ae92c2f863dbc7ed557788",
+  "TEST_RESULTS.md": "2aede3c6b2328a0cfb0708ed55a5c5e48fc14507221fab328469bab3fde48b4f",
+  "app.py": "25f1b412b34135a01e56330f36fcb4e98150cd757deb767a317d533d84c6af2f",
+  "assets/best_model.pt": "85d942f6d2697ab57a91c2e3204b034817e5555603183ef9bf90cfc7eaba8750",
+  "assets/expected_2000bar.json": "db8a2a8d1c763d25c47e66e8777950a683edc9d5a6da86039c76f2c3494ecfc0",
+  "assets/protocol.json": "c180e08642f780d85ac121be74732bfc492735d9e88691e7a9ed3e9326b33c62",
+  "assets/report.json": "444a5b356348e3192f71898df944545afc8c9722eb12eecef14469b11061fe02",
+  "assets/waygate_history.json": "dcfd6b05cdb0fe3aa7c2122a7ac35514cb6e3c30b00d4f43d1ca97529aa33afb",
+  "engine.py": "2457d2c2237ef13009f3ce7a2dc1e9ee64b393086d2bd87c4732b8aa2878c5bb",
+  "measured_geometry_TEMPLATE.json": "c4d6523b681644dfc14db9de4a90fc6a27aeea0a3cd34107136f0752858a0e65",
+  "nmc_reference.py": "0123c3d7e9e1814bb1b4268f371aa044e587a5da5e84377bbaa35f8f9946a134",
+  "prepare_waygate.py": "d6d5b90e43be41fda98a76a28236a49625dffa647a7fe121e773eacdefa876af",
+  "test_app.py": "7bf5bfcb5fee182765341b0973e376513ec6d35c3a9278199846fa094f690772",
+  "web/evidence.html": "87195e10a31e54dd93c40f0e44e600f69878a5f0fffab157376505762459e204",
+  "web/index.html": "129a834f7af69c7c3144800e4999c39dc8b121ee8e2dba7b3803ebfd16eb2d56"
+}

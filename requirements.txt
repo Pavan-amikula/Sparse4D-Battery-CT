@@ -1,0 +1,7 @@
+# GPU inference requires a CUDA-compatible PyTorch and ASTRA installation.
+# Reuse the verified environment when reproducing the recorded results.
+numpy
+tifffile
+matplotlib
+torch
+astra-toolbox

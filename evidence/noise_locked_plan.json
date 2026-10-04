@@ -1,0 +1,112 @@
+{
+  "levels_fraction_clean_projection_rms": [
+    0.0,
+    0.01,
+    0.03,
+    0.05
+  ],
+  "seeds": [
+    202610041,
+    202610042,
+    202610043
+  ],
+  "regions": [
+    {
+      "case_id": "noise_000",
+      "z": [
+        45,
+        173
+      ],
+      "y": [
+        256,
+        384
+      ],
+      "x": [
+        1472,
+        1600
+      ]
+    },
+    {
+      "case_id": "noise_001",
+      "z": [
+        45,
+        173
+      ],
+      "y": [
+        448,
+        576
+      ],
+      "x": [
+        1472,
+        1600
+      ]
+    },
+    {
+      "case_id": "noise_002",
+      "z": [
+        45,
+        173
+      ],
+      "y": [
+        640,
+        768
+      ],
+      "x": [
+        1472,
+        1600
+      ]
+    },
+    {
+      "case_id": "noise_003",
+      "z": [
+        45,
+        173
+      ],
+      "y": [
+        832,
+        960
+      ],
+      "x": [
+        1472,
+        1600
+      ]
+    },
+    {
+      "case_id": "noise_004",
+      "z": [
+        45,
+        173
+      ],
+      "y": [
+        1024,
+        1152
+      ],
+      "x": [
+        1472,
+        1600
+      ]
+    },
+    {
+      "case_id": "noise_005",
+      "z": [
+        45,
+        173
+      ],
+      "y": [
+        1216,
+        1344
+      ],
+      "x": [
+        1472,
+        1600
+      ]
+    }
+  ],
+  "noise_rule": "Independent additive Gaussian in projection line-integral units; no clipping; sigma=fraction*RMS(clean).",
+  "zero_noise_replicates": 1,
+  "nonzero_noise_replicates": 3,
+  "checkpoint_sha256": "85d942f6d2697ab57a91c2e3204b034817e5555603183ef9bf90cfc7eaba8750",
+  "script_sha256": "7b25fab0f0b3e5919a11e4905128661347417d727f534b856078f74b2961f8c1",
+  "training_performed": false,
+  "performance_based_selection": false
+}

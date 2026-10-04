@@ -1,0 +1,210 @@
+{
+  "mode": "archive",
+  "checkpoint_sha256": "85d942f6d2697ab57a91c2e3204b034817e5555603183ef9bf90cfc7eaba8750",
+  "epoch": 12,
+  "training_performed": false,
+  "request": {
+    "mode": "archive",
+    "path": "C:\\Users\\paam25\\Downloads\\NMC_Waygate_Replay\\prepared_waygate\\projections.npy",
+    "origin": [
+      45,
+      256,
+      1728
+    ],
+    "scaling": "nmc_uint16",
+    "factor": 1,
+    "noise": 0,
+    "geometry_path": "C:\\Users\\paam25\\Downloads\\NMC_Waygate_Replay\\prepared_waygate\\geometry.json",
+    "confirm_reconstruction": false,
+    "confirm_domain": true,
+    "confirm_preprocessing": true
+  },
+  "input_provenance": {
+    "path": "C:\\Users\\paam25\\Downloads\\NMC_Waygate_Replay\\prepared_waygate\\projections.npy",
+    "sha256": "54bf2d838b45004eddea855c59bcd9ddc23891692546b42e90998277796a3670",
+    "shape": [
+      250,
+      75,
+      250
+    ],
+    "dtype": "float32"
+  },
+  "geometry": {
+    "calibration_status": "metadata_approximation",
+    "experimental_archive_replay": true,
+    "type": "circular_cone",
+    "array_order": "detector_rows,angles,detector_cols",
+    "detector_rows": 250,
+    "detector_cols": 250,
+    "detector_spacing_x": 0.6,
+    "detector_spacing_y": 0.6,
+    "source_origin": 129.03973962,
+    "source_detector": 806.495599,
+    "volume_width": 24.000082165002823,
+    "volume_shape": [
+      128,
+      128,
+      128
+    ],
+    "angles_degrees": [
+      0.0,
+      4.8,
+      9.6,
+      14.4,
+      19.2,
+      24.0,
+      28.8,
+      33.6,
+      38.4,
+      43.2,
+      48.0,
+      52.8,
+      57.6,
+      62.4,
+      67.2,
+      72.0,
+      76.8,
+      81.6,
+      86.4,
+      91.2,
+      96.0,
+      100.8,
+      105.6,
+      110.4,
+      115.2,
+      120.0,
+      124.8,
+      129.6,
+      134.4,
+      139.2,
+      144.0,
+      148.8,
+      153.6,
+      158.4,
+      163.2,
+      168.0,
+      172.8,
+      177.6,
+      182.4,
+      187.2,
+      192.0,
+      196.8,
+      201.6,
+      206.4,
+      211.2,
+      216.0,
+      220.8,
+      225.6,
+      230.4,
+      235.2,
+      240.0,
+      244.8,
+      249.6,
+      254.4,
+      259.2,
+      264.0,
+      268.8,
+      273.6,
+      278.4,
+      283.2,
+      288.0,
+      292.8,
+      297.6,
+      302.4,
+      307.2,
+      312.0,
+      316.8,
+      321.6,
+      326.4,
+      331.2,
+      336.0,
+      340.8,
+      345.6,
+      350.4,
+      355.2
+    ],
+    "centered_volume": true,
+    "detector_tilt_degrees": 0,
+    "assumptions": [
+      "Detector dark/flat correction status is unknown. No additional dark/flat subtraction is applied.",
+      "Historical provisional preprocessing: mean 3x3 intensities, floor 0.5, then -log(I/FreeRay=9851); negative values retained.",
+      "Historical geometry assumption: exported 750-pixel detector pitch treated as 0.2 mm, then 0.6 mm after 3x3 reduction. The 1500-to-750 vendor ROI mapping may imply a different effective pitch; it is unresolved.",
+      "Centered circular cone approximation: detector rotation zero; recorded vendor Tilt=-0.00044246 and CorrectionValue=1.095 are not interpreted or applied.",
+      "Angles from the acquisition log are used in increasing order; scanner-to-ASTRA orientation has not been independently verified.",
+      "Frozen NMC model is transferred to a different battery type without training or validated measured-data performance.",
+      "Full 24.000082 mm field reconstructed as 128 cubed; voxel spacing is twice the NMC simulation spacing. This introduces a spatial-scale domain shift."
+    ],
+    "source_metadata": {
+      "pca_sha256": "d6d04a4948d92d46655b9207a34d378fd5e53c5c16cc8fef4d1586e645d21fbb",
+      "pcp_sha256": "5c5bb5511ebcd6df06a10f92ab82acfe95f0e32f8d512ac0a8d594a7fbfefcab"
+    },
+    "preprocessing_confirmed": false
+  },
+  "metrics": {
+    "sirt20": {
+      "fit_projection_rmse": 0.05762960255266533
+    },
+    "model_raw": {
+      "fit_projection_rmse": 0.06231428362347516
+    },
+    "sirt23": {
+      "fit_projection_rmse": 0.05572426113084377
+    },
+    "model_sirt3": {
+      "fit_projection_rmse": 0.058574087659924653
+    }
+  },
+  "timings_seconds": {
+    "runtime_load_and_warmup": 1.6944250999949872,
+    "input_loading": 0.019205100019462407,
+    "fdk_sirt20": 0.44691689999308437,
+    "input_quantization": 0.00913839996792376,
+    "model_inference": 0.29213549999985844,
+    "extra_sirt_baseline": 0.09536010003648698,
+    "extra_sirt_hybrid": 0.09505080000963062,
+    "metrics": 0.41408099996624514,
+    "volume_saving": 0.008906700008083135
+  },
+  "processing_seconds": 3.111687700031325,
+  "cold_model_load": true,
+  "latency_target_seconds": 5,
+  "processing_target_met": true,
+  "peak_pytorch_gpu_allocated_mb": 238.1015625,
+  "torch_version": "2.11.0+cu128",
+  "astra_version": "2.5.0",
+  "methods": [
+    "sirt20",
+    "model_raw",
+    "sirt23",
+    "model_sirt3"
+  ],
+  "display_range": [
+    0.0,
+    0.328125
+  ],
+  "selfcheck": null,
+  "model_input_range": [
+    0.0,
+    0.452392578125
+  ],
+  "limits": [
+    "Processing latency excludes scanner acquisition, browser transfers and ZIP packaging.",
+    "The 5-second target is an engineering target, not a scanner real-time claim.",
+    "GPU memory metric includes PyTorch allocations only, not ASTRA or total device usage.",
+    "Model validation uses simulated NMC views. Measured-data generalization is unproven.",
+    "Projection RMSE uses reconstruction angles; it is not held-out validation.",
+    "Enhancement mode does not perform physics correction without projection data.",
+    "TIFF references are reconstructions, not independent physical ground truth.",
+    "Detector dark/flat correction status is unknown. No additional dark/flat subtraction is applied.",
+    "Historical provisional preprocessing: mean 3x3 intensities, floor 0.5, then -log(I/FreeRay=9851); negative values retained.",
+    "Historical geometry assumption: exported 750-pixel detector pitch treated as 0.2 mm, then 0.6 mm after 3x3 reduction. The 1500-to-750 vendor ROI mapping may imply a different effective pitch; it is unresolved.",
+    "Centered circular cone approximation: detector rotation zero; recorded vendor Tilt=-0.00044246 and CorrectionValue=1.095 are not interpreted or applied.",
+    "Angles from the acquisition log are used in increasing order; scanner-to-ASTRA orientation has not been independently verified.",
+    "Frozen NMC model is transferred to a different battery type without training or validated measured-data performance.",
+    "Full 24.000082 mm field reconstructed as 128 cubed; voxel spacing is twice the NMC simulation spacing. This introduces a spatial-scale domain shift.",
+    "Archived acquisition replay; no live scanner connection or acquisition-to-display latency measurement.",
+    "128-cubed full-field volume differs from the earlier 256-cubed Waygate experiment; its old numerical results do not apply."
+  ],
+  "experimental_archive_replay": true,
+  "calibration_confirmed": false
+}

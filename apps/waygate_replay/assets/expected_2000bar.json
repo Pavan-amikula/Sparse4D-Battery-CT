@@ -1,0 +1,890 @@
+{
+  "status": "frozen_nmc2000bar_separate_stack_simulation_test",
+  "created_utc": "2026-10-04T13:08:59.901596+00:00",
+  "checkpoint_sha256": "85d942f6d2697ab57a91c2e3204b034817e5555603183ef9bf90cfc7eaba8750",
+  "checkpoint_epoch": 12,
+  "training_performed": false,
+  "training_protocol_sha256": "c180e08642f780d85ac121be74732bfc492735d9e88691e7a9ed3e9326b33c62",
+  "training_report_sha256": "444a5b356348e3192f71898df944545afc8c9722eb12eecef14469b11061fe02",
+  "script_sha256": "934c08a16cb327ebefd10390e274ac5497334cf8982b39b4ad443d3fd0174669",
+  "source_files": [
+    {
+      "name": "NMC_90wt_2000bar_046.tif",
+      "sha256": "3ef18f63e5f6ae0abc3177716a40fdf26f6aec8cbf1a5ed716aca494998bb679"
+    },
+    {
+      "name": "NMC_90wt_2000bar_047.tif",
+      "sha256": "4b4d9a88512976df9130709d4738704cdeadcf8f95764fcebb1ba70a95eb58f8"
+    },
+    {
+      "name": "NMC_90wt_2000bar_048.tif",
+      "sha256": "6643e5fd1214226cf41acc099ba7307772e0f6a4340ab09cae4effc94dc926e5"
+    },
+    {
+      "name": "NMC_90wt_2000bar_049.tif",
+      "sha256": "5d5d3694b0d7e417b27e62e6e3728126261876a76230e71a8ee136278a2dc049"
+    },
+    {
+      "name": "NMC_90wt_2000bar_050.tif",
+      "sha256": "82a1fa470b2b882d6c5bfe7729a314ab2038f6ecdc779eab235041f044c86afd"
+    },
+    {
+      "name": "NMC_90wt_2000bar_051.tif",
+      "sha256": "6425dc27dee067488d32951ef3e324dc37ef31fdd734ee7a19fcde9b3cdc9f15"
+    },
+    {
+      "name": "NMC_90wt_2000bar_052.tif",
+      "sha256": "6086707f694cfb5dec127ef28ea1e2a407171122f8d71b1d14bf3f257bfa7857"
+    },
+    {
+      "name": "NMC_90wt_2000bar_053.tif",
+      "sha256": "2a72b0358dfcb401f4c63996551ffe24c451e2e95a56ab31c2cc9248ba0896f7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_054.tif",
+      "sha256": "279aecd1e18fbb3f1c00498834098e29c2a9a2ca24fdd334c1914aaa217e0641"
+    },
+    {
+      "name": "NMC_90wt_2000bar_055.tif",
+      "sha256": "5108506fa2838a585361fd0120bbb038dedfda0bb71d81b70b2a6e21dc7dcba1"
+    },
+    {
+      "name": "NMC_90wt_2000bar_056.tif",
+      "sha256": "f84191d7920e112d99b510902e367fcdfa03a1ce055b477e51ecf19f2bcb914e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_057.tif",
+      "sha256": "f3ae0337bd6d01231943b6d7677fd3ffa80ff79949410fbc891ddda872a0cd32"
+    },
+    {
+      "name": "NMC_90wt_2000bar_058.tif",
+      "sha256": "1d6a333ef9849e5211f3d1a18664e59a7215bacaa5f055b87c530c8d03a349e8"
+    },
+    {
+      "name": "NMC_90wt_2000bar_059.tif",
+      "sha256": "2c38da074fdb190d43a2d37f7ff0ec4d4d0615681ae6a65b650d8a1455c154ce"
+    },
+    {
+      "name": "NMC_90wt_2000bar_060.tif",
+      "sha256": "3dfff47f8fa740c6c3986f4fa553750991bc82631dc73c09c942867e13f5d29e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_061.tif",
+      "sha256": "e8ff7131cc766553322fc196be501415e6a300770f39e36fff7ea3b3f9651a5f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_062.tif",
+      "sha256": "31cbaa2ec9c0568cd73f716dc654284fd6af7cbf18f8de54b5da85ca66382ee5"
+    },
+    {
+      "name": "NMC_90wt_2000bar_063.tif",
+      "sha256": "b893d8d8808ae093d7c2f99b891e10eb74ccd72bdeba9d14e622e300d545166f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_064.tif",
+      "sha256": "5f39fd2f60512bdcb113492ac8c6cabfba88eb0a2d8b23ac625b5477749f6735"
+    },
+    {
+      "name": "NMC_90wt_2000bar_065.tif",
+      "sha256": "c062521e4c41cd86ed781e3d5a16c5e5b1fc195796f5396b8d4226043dc27d44"
+    },
+    {
+      "name": "NMC_90wt_2000bar_066.tif",
+      "sha256": "45d1aeed64c94387ee3e92d8ff6902ff7ee74bfa447d21ef06bb76081785e75a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_067.tif",
+      "sha256": "44687a78a98577b06225fa60317b2f4d79d99118e4c62df8edc6c982bef2fde6"
+    },
+    {
+      "name": "NMC_90wt_2000bar_068.tif",
+      "sha256": "8f8090817102ee42d899e6c2737828f3632a554dc30d83445435d973e13fe967"
+    },
+    {
+      "name": "NMC_90wt_2000bar_069.tif",
+      "sha256": "2f3bef4671d6ade8e3a1ade3b68f316514b9028464138817d141c9ccbbc7e75e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_070.tif",
+      "sha256": "30b0d91bf35faeb59dfd42800c68105246c5bf734fd553a5c3079c36b8522ad3"
+    },
+    {
+      "name": "NMC_90wt_2000bar_071.tif",
+      "sha256": "cc0631aed9a2f760f7ef719c16cde271f761e2a95194986f97ca752921705a1e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_072.tif",
+      "sha256": "bffd8259a6cc33df412be4b7ca72cf4524240b585190c163ddb1a7899197bec2"
+    },
+    {
+      "name": "NMC_90wt_2000bar_073.tif",
+      "sha256": "a39e3314011e4588f3f771a83b380714a8a6580b2e906ecb8548460b1443892e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_074.tif",
+      "sha256": "4e3e1ea1fc365d6399fb5efd7fb784ca57bb44487f6c0ad73a1dd0121f1ad85b"
+    },
+    {
+      "name": "NMC_90wt_2000bar_075.tif",
+      "sha256": "772402b706279f15448b3f22cb382a1b77b0f9cf7155fd23ec6dae0bb5536c6f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_076.tif",
+      "sha256": "657f24a5e538cc582782d23c0e623293ce55dd23a23baad6c6226091be6bfa0b"
+    },
+    {
+      "name": "NMC_90wt_2000bar_077.tif",
+      "sha256": "dead965b41b00512c0cdd031d94478c3e27ce322d298ba3a199c562c161314e6"
+    },
+    {
+      "name": "NMC_90wt_2000bar_078.tif",
+      "sha256": "b9df0a2c5ca1ee312fd17c287832a59d1e00073b9b599defdc4cbccc155fb0fe"
+    },
+    {
+      "name": "NMC_90wt_2000bar_079.tif",
+      "sha256": "87789517882c2de2b52ab3e1379d63e443e2a7c571263a82929f90c2817b18f7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_080.tif",
+      "sha256": "6e885230038f6fc94192f60a4fdc37969409962f00f942120291782da0ecfee4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_081.tif",
+      "sha256": "199b58414b5a92bcf33edcf2b6bd6769778b0cb902a098358f6de6407f12044e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_082.tif",
+      "sha256": "a6771d0b98a32fe6a49d5585aabcd0ff2e15f5a90c65f1b67b91b48220013527"
+    },
+    {
+      "name": "NMC_90wt_2000bar_083.tif",
+      "sha256": "77e1a5dd07cdef378625a541fecce6fbbe887efce287b373c9714c9e824f142d"
+    },
+    {
+      "name": "NMC_90wt_2000bar_084.tif",
+      "sha256": "7b4aeeab3e09a44657975100a6b1689f5e0916bb581752a0c39151b766e69291"
+    },
+    {
+      "name": "NMC_90wt_2000bar_085.tif",
+      "sha256": "4d3f420963d451fbe45842eef988545a0706916b362170b4efcd12f56abdda42"
+    },
+    {
+      "name": "NMC_90wt_2000bar_086.tif",
+      "sha256": "b1e3b17ddd73ae9577ddf5eccc0e926e7e7b92a4b2610f03437f2dacbe887464"
+    },
+    {
+      "name": "NMC_90wt_2000bar_087.tif",
+      "sha256": "c3e87aef1e4868468722f8a5ec5217f3a87dcb7a82e0145c9086cfd84f1d58cc"
+    },
+    {
+      "name": "NMC_90wt_2000bar_088.tif",
+      "sha256": "f6341018f55dbc4adaa6479cc6d580e4faa1314bdf3ea818a106d95ccd051ff0"
+    },
+    {
+      "name": "NMC_90wt_2000bar_089.tif",
+      "sha256": "dd9ccb594e9116605851fa3e112ab72d95de6a90148f70571b01cd74a32d91d4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_090.tif",
+      "sha256": "4fed398c24c1475ddee269c18f7df5dc10fc3d79dfa85cfc66d0ce045ce8d4d9"
+    },
+    {
+      "name": "NMC_90wt_2000bar_091.tif",
+      "sha256": "b4741883e69a7a142004e82566cea40e1beabf0d4241284b6ad6e934c917560d"
+    },
+    {
+      "name": "NMC_90wt_2000bar_092.tif",
+      "sha256": "f89ab66cd7b52b853000966c648615b05e5169624b3c4dc09f069680d6f58e53"
+    },
+    {
+      "name": "NMC_90wt_2000bar_093.tif",
+      "sha256": "0c121b3156bd2472e3720d39fd51cbbc8e31141caabbdfff981f8b9be3f7e8f4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_094.tif",
+      "sha256": "94da786f98b3777ee0192568010777e740660728c2d93ee65d17bee310abb4a4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_095.tif",
+      "sha256": "d5f7286b250cd00086827b9b35af086e12e6fb56037fc8a97828549d275ada1d"
+    },
+    {
+      "name": "NMC_90wt_2000bar_096.tif",
+      "sha256": "d3aa2a1c6b1f6dd5ef109e4723dd6805f8612ffff1a8631c2bf43eca97dc6ab0"
+    },
+    {
+      "name": "NMC_90wt_2000bar_097.tif",
+      "sha256": "abf0b2ae1ca1ff7b27c7148a7c1e7aba1ec6bac5fbcb714c44f213da200c0cca"
+    },
+    {
+      "name": "NMC_90wt_2000bar_098.tif",
+      "sha256": "0446338700bf63a7b68c0cb31f0010003e8ae503e50a1fdf92421899889bacd9"
+    },
+    {
+      "name": "NMC_90wt_2000bar_099.tif",
+      "sha256": "45f772ec66ea7b8316c719a79da874b3c9311673ca9e5acb93c96335b63708ba"
+    },
+    {
+      "name": "NMC_90wt_2000bar_100.tif",
+      "sha256": "d4d0bd5fc04860df9b0a9b1201982effb8fbd4525a37051d2e0dc17eddd68328"
+    },
+    {
+      "name": "NMC_90wt_2000bar_101.tif",
+      "sha256": "193669a3a13c5ca726debf32f1d571763b4574cd113f1fe969c90824f9d17897"
+    },
+    {
+      "name": "NMC_90wt_2000bar_102.tif",
+      "sha256": "438b6243b363c8b23cd438b83a27550d7a815e6715457b663584d839c4ca375e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_103.tif",
+      "sha256": "cd4dd96fe695c142dac242a439a66c9f66efac3aeafb50c98c832bff04ecc4a1"
+    },
+    {
+      "name": "NMC_90wt_2000bar_104.tif",
+      "sha256": "11b6c0abe40ab00e76766eac2e4145b5d9d5d36e498664df19dc0c69f0491b02"
+    },
+    {
+      "name": "NMC_90wt_2000bar_105.tif",
+      "sha256": "a411e1c794392e6a436f5d9e25348999eec9ca90f34b9429a567a237546bf462"
+    },
+    {
+      "name": "NMC_90wt_2000bar_106.tif",
+      "sha256": "43afb1a178d940f4553a27ba45d9b2f066f5b748c48322da84e25b7a9e2040bc"
+    },
+    {
+      "name": "NMC_90wt_2000bar_107.tif",
+      "sha256": "8e6b70bfb0197676a635eb2c8bef326731f31eae32014c16a1e604d6966cfce0"
+    },
+    {
+      "name": "NMC_90wt_2000bar_108.tif",
+      "sha256": "b7477c773f990edaa6dbc896cf768e014c85f8ceca8ed2f2221560ea8b07cb04"
+    },
+    {
+      "name": "NMC_90wt_2000bar_109.tif",
+      "sha256": "bade50580782634a99b68522aedc6497059785262abffe0ac4f411181e756435"
+    },
+    {
+      "name": "NMC_90wt_2000bar_110.tif",
+      "sha256": "08067aee9688cee5f9d85ef41816035d2b6bda8cd10a6611f7262adb68dfd8bc"
+    },
+    {
+      "name": "NMC_90wt_2000bar_111.tif",
+      "sha256": "509b8b4c9f613cafe1d17d9500b4080083bfafb9ebc73559418b37560fb8ae2b"
+    },
+    {
+      "name": "NMC_90wt_2000bar_112.tif",
+      "sha256": "e776a8dbc39d7d5bfff1ab9831f1b200bee7ed21d6b02938465fdffa3717c335"
+    },
+    {
+      "name": "NMC_90wt_2000bar_113.tif",
+      "sha256": "b012d2cf03eb1ef0686a933c5e10b109ab9dff41efe1c8748249ed06c2a4405f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_114.tif",
+      "sha256": "4b124b04904eb9516c2ec9463a272869aa53c251872e0238dddfff637ad4646a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_115.tif",
+      "sha256": "b6a59b8154eb281dc342b3e2864a148ce42a6f35079ce4260d699a5a6cf2e4f5"
+    },
+    {
+      "name": "NMC_90wt_2000bar_116.tif",
+      "sha256": "855495c351c530231b5cdfc8515dd5b5491f279bb3362d2bddd79d3e63961a99"
+    },
+    {
+      "name": "NMC_90wt_2000bar_117.tif",
+      "sha256": "a937e30035bde5f53924bc35f9f449ea8cdbb9e19b1f02f96ae4fe560b085551"
+    },
+    {
+      "name": "NMC_90wt_2000bar_118.tif",
+      "sha256": "fb063c290c2486ef46a1d0c905754227bcf5d1e2e054893ae70ace2254d6f63a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_119.tif",
+      "sha256": "10fbca3617a4539ece30b87f8efccbe16e666155fe95739d75d366de8a478914"
+    },
+    {
+      "name": "NMC_90wt_2000bar_120.tif",
+      "sha256": "3855f117236f207f41214f89f348c9b1c9a68e12d229988e7031b93598c678c2"
+    },
+    {
+      "name": "NMC_90wt_2000bar_121.tif",
+      "sha256": "ecdc898ab3238fc60bbacb967aa520e149cb9df1a8bd38b8a5b558271e9f3675"
+    },
+    {
+      "name": "NMC_90wt_2000bar_122.tif",
+      "sha256": "8c5b264aff6a05baa6370e7c7cfc95e6b3eaa2ef96e80a3118c853824f1132b3"
+    },
+    {
+      "name": "NMC_90wt_2000bar_123.tif",
+      "sha256": "c1ea75dae48bb61fc7badc66d2a9f4fc8229e0ea8fc951fdfc32a9fd11bce26f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_124.tif",
+      "sha256": "efa1854c3b6c2419aad8468feb69411844cbed35f14efc84a43252d82c522beb"
+    },
+    {
+      "name": "NMC_90wt_2000bar_125.tif",
+      "sha256": "42455974ad20affdefe1c6d4a1be43a24e9d3f803ac8c0127d40fb01b6cade7b"
+    },
+    {
+      "name": "NMC_90wt_2000bar_126.tif",
+      "sha256": "277d3c1a5aec611253d6727daa8540d15e6f544b13081f3c11742758bc98a8d7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_127.tif",
+      "sha256": "dd770832e55b584b8234eeebb7e231c4e4dde1a6134db380a5d3ae8b30286607"
+    },
+    {
+      "name": "NMC_90wt_2000bar_128.tif",
+      "sha256": "d24c4e0f7f10435cfdcf22fe47ca950e4cb835b8261f58b99e52045a8a58135d"
+    },
+    {
+      "name": "NMC_90wt_2000bar_129.tif",
+      "sha256": "6c07a2ea02c2a875cac47a99987c32d1ff6c455d2762ff59cab2bd1ec1f943c3"
+    },
+    {
+      "name": "NMC_90wt_2000bar_130.tif",
+      "sha256": "5e471b41a3125f98444938dd15da2ae1d316bca2a4c39b7f08b16373f56ef7c8"
+    },
+    {
+      "name": "NMC_90wt_2000bar_131.tif",
+      "sha256": "a38f3510a5cb5f2284cb61d23be69728bab002d5b3144062544adb89e8483e49"
+    },
+    {
+      "name": "NMC_90wt_2000bar_132.tif",
+      "sha256": "aae594124314363edacecb539332f3d27ecb2bd7f995e408a640cbc6b8d918a7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_133.tif",
+      "sha256": "a07f9f46590a05967daa353d42f9f16c68cc49bef9fc544a7a930575226a6284"
+    },
+    {
+      "name": "NMC_90wt_2000bar_134.tif",
+      "sha256": "0a79a8f63ced1b0f0043720e6d9fbc4ac75fd8f5eb788b24f2290b90a892def2"
+    },
+    {
+      "name": "NMC_90wt_2000bar_135.tif",
+      "sha256": "a29704ecdc143274f86885ca9d648f1c92044bf853a7b83621f0af41a05f9c13"
+    },
+    {
+      "name": "NMC_90wt_2000bar_136.tif",
+      "sha256": "5dfc11bbef4849bf37505e74947fced793538dadd1a9b5654bd3a8cfe0a3079d"
+    },
+    {
+      "name": "NMC_90wt_2000bar_137.tif",
+      "sha256": "c9547c33b58af7dbd3b4068520ca84226a230e56038ef7d585e453e50450e4e4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_138.tif",
+      "sha256": "4c98555fcb0aecc24edd775ec6f1975373e21dfab1c6df9c08a63a3a70d8e791"
+    },
+    {
+      "name": "NMC_90wt_2000bar_139.tif",
+      "sha256": "be33091700c973a765d687319b8bee7b748b7df76206cd12891bf054ec7f5ea4"
+    },
+    {
+      "name": "NMC_90wt_2000bar_140.tif",
+      "sha256": "a1ebce52569309cf4c594dee6cc577332f399432d3b2613c41c69f11b9b3536a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_141.tif",
+      "sha256": "750c51ffff40ee2275e38cf02cad03dca0bf711e3951642a3c7e0f5f35fc0cfc"
+    },
+    {
+      "name": "NMC_90wt_2000bar_142.tif",
+      "sha256": "263748dc6a8a99aec948f7893641a7036233c95c94ab269e49d7c4ee31d33626"
+    },
+    {
+      "name": "NMC_90wt_2000bar_143.tif",
+      "sha256": "59856ba9e1a5454b78e7766883668ad4cb58456e75aeb293f98a4905d3ea4d7f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_144.tif",
+      "sha256": "4cc673b06b8e67a0e00ca50724eaa07c2e2636ce286237f37eaf6fbc4d136197"
+    },
+    {
+      "name": "NMC_90wt_2000bar_145.tif",
+      "sha256": "3a56c2938adacc76a1fa3b26c39bdcf6b7aebb9336834f36392d998380fffd18"
+    },
+    {
+      "name": "NMC_90wt_2000bar_146.tif",
+      "sha256": "df16c7bd2b917b217c99cd1348de403f2cdf4456fd4f4cb2b17d17f361c0c308"
+    },
+    {
+      "name": "NMC_90wt_2000bar_147.tif",
+      "sha256": "e9fa94138455573dc42d4008800d6cf03ec85bb4a3dcee65bac10ccf40f52d7a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_148.tif",
+      "sha256": "743cbe7b22f503b08aa771d211659989b380d51494d134f03028c1d3a585f37c"
+    },
+    {
+      "name": "NMC_90wt_2000bar_149.tif",
+      "sha256": "276d9327024367efec8eefb2f83673fd2e8634b277063988bcf62cd6b1174080"
+    },
+    {
+      "name": "NMC_90wt_2000bar_150.tif",
+      "sha256": "845cc5e59e92ea8f922dd59073647910ff4ef41e78027830a3edff7412316061"
+    },
+    {
+      "name": "NMC_90wt_2000bar_151.tif",
+      "sha256": "b16c3c29d85c5bc1177d865b5c7948b90ab28d1c994c24d6aaaaafaf179083b7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_152.tif",
+      "sha256": "9638d7db2c1475c0d04677542a467d06f37ce388291d3c414055c9717df5384a"
+    },
+    {
+      "name": "NMC_90wt_2000bar_153.tif",
+      "sha256": "80ee30030a5bfafa1b2c7bd816bafac72687137bfa5e679519c17d17464ee154"
+    },
+    {
+      "name": "NMC_90wt_2000bar_154.tif",
+      "sha256": "7ba4b5d61402ec7cd2b2f4f6f15a90427e9cec912afb69cbf1fae9fafc314d8e"
+    },
+    {
+      "name": "NMC_90wt_2000bar_155.tif",
+      "sha256": "ce6db8a4aa1ee64210bb4b0b96effe0701fca8c91532a89029f80d7b260b0ed3"
+    },
+    {
+      "name": "NMC_90wt_2000bar_156.tif",
+      "sha256": "5ba60c8c55e29b86dbbb459822967822fd9f3724385838424ca4e3fc8e1d9b11"
+    },
+    {
+      "name": "NMC_90wt_2000bar_157.tif",
+      "sha256": "f8d8d93224597731a9845a73b500dbc64b778a83f58fd6b8ee1094a2d03e87d9"
+    },
+    {
+      "name": "NMC_90wt_2000bar_158.tif",
+      "sha256": "3fe5b2c936bfa312d98e24eebd07e7f1058e5bbb9e8ed7a8471d446c00f04030"
+    },
+    {
+      "name": "NMC_90wt_2000bar_159.tif",
+      "sha256": "661aca6356152b7e6043695cca28a2a90f924d832deee9bc6a163258426a68b5"
+    },
+    {
+      "name": "NMC_90wt_2000bar_160.tif",
+      "sha256": "1f1b85a5405d106c9bb989b12539ca32e25ea7ddde4c68ee9bbbf005397eb671"
+    },
+    {
+      "name": "NMC_90wt_2000bar_161.tif",
+      "sha256": "144029facc3fb1f901a48ce66a17ad1546d8535cfbf4944fb4576037e668f7c7"
+    },
+    {
+      "name": "NMC_90wt_2000bar_162.tif",
+      "sha256": "87fb9a20b06cdc37b4fea334594635a00bacfa3c050936b4893e0f0ae4ef6424"
+    },
+    {
+      "name": "NMC_90wt_2000bar_163.tif",
+      "sha256": "e3e0868130261e7067d181b5589d0ad413f5289615a7bdce89f3e235f9379fe8"
+    },
+    {
+      "name": "NMC_90wt_2000bar_164.tif",
+      "sha256": "859275b82fe0375c660305a65b37f6ce5d0eb399caf9c1fc100eef982e21c48f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_165.tif",
+      "sha256": "7bb57bf689f78f8f440b5dcdd2330ad5b22e8822e320dd368ed566237a8594c6"
+    },
+    {
+      "name": "NMC_90wt_2000bar_166.tif",
+      "sha256": "c437aaeca4ffb4780dcfee1db6b066b010c180ed87471e398f56848d6195da8f"
+    },
+    {
+      "name": "NMC_90wt_2000bar_167.tif",
+      "sha256": "335be1cf2b23a0c011cb398bd1294004b957c863a7acec0e0e124534167bf86c"
+    },
+    {
+      "name": "NMC_90wt_2000bar_168.tif",
+      "sha256": "a52110f02da63c773f32802fe5ec190fcffaa8755e1e589759d7bae8992d9d5b"
+    },
+    {
+      "name": "NMC_90wt_2000bar_169.tif",
+      "sha256": "94a31e3b05adb3dabe0c025c3c950d06efb162101b778c4bf3e80e99bc648771"
+    },
+    {
+      "name": "NMC_90wt_2000bar_170.tif",
+      "sha256": "d3bd919db4354b96dbb61895e5d03957c07c9e4d748abf45b4b4b2d6ddbe8105"
+    },
+    {
+      "name": "NMC_90wt_2000bar_171.tif",
+      "sha256": "0c0e50ce0551a9dd737d5c211ded262205dc80125c09084584efb3ab820807db"
+    },
+    {
+      "name": "NMC_90wt_2000bar_172.tif",
+      "sha256": "722982054c50c6b6d96c6b8518998014450be9a7a23a941f80d15e6f6ca2c586"
+    },
+    {
+      "name": "NMC_90wt_2000bar_173.tif",
+      "sha256": "f9924a93e2750f1eb4e04e18ba6ef81426ba18286469b5b5da6666db47147e3c"
+    }
+  ],
+  "different_specimen_confirmed": false,
+  "test_cases": [
+    {
+      "region": {
+        "case_id": "external_000",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          256,
+          384
+        ],
+        "x": [
+          1728,
+          1856
+        ]
+      },
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.005319563523081217,
+          "fit_projection_rmse": 0.002795690704441689
+        },
+        "model_raw": {
+          "voxel_rmse": 0.0032367938966235583,
+          "fit_projection_rmse": 0.00205729075067542
+        },
+        "sirt23": {
+          "voxel_rmse": 0.005130632593946934,
+          "fit_projection_rmse": 0.0026228333091886046
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.003069439027802026,
+          "fit_projection_rmse": 0.00187172527694956
+        }
+      },
+      "input_quantization_max_abs": 0.00012195110321044922
+    },
+    {
+      "region": {
+        "case_id": "external_001",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          448,
+          576
+        ],
+        "x": [
+          1728,
+          1856
+        ]
+      },
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.006849993100269989,
+          "fit_projection_rmse": 0.003575605386820174
+        },
+        "model_raw": {
+          "voxel_rmse": 0.004530486529639616,
+          "fit_projection_rmse": 0.0028500259539787154
+        },
+        "sirt23": {
+          "voxel_rmse": 0.006619899741796099,
+          "fit_projection_rmse": 0.003354581892026305
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.004320578607802051,
+          "fit_projection_rmse": 0.002608078317189024
+        }
+      },
+      "input_quantization_max_abs": 0.0001220703125
+    },
+    {
+      "region": {
+        "case_id": "external_002",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          640,
+          768
+        ],
+        "x": [
+          1728,
+          1856
+        ]
+      },
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.007060932332722837,
+          "fit_projection_rmse": 0.0036916733413686125
+        },
+        "model_raw": {
+          "voxel_rmse": 0.004647426843779311,
+          "fit_projection_rmse": 0.0029316276804408114
+        },
+        "sirt23": {
+          "voxel_rmse": 0.0068215802981417975,
+          "fit_projection_rmse": 0.0034623306331044127
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.004429567522190241,
+          "fit_projection_rmse": 0.0026839432902438843
+        }
+      },
+      "input_quantization_max_abs": 0.0001220703125
+    },
+    {
+      "region": {
+        "case_id": "external_003",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          832,
+          960
+        ],
+        "x": [
+          1728,
+          1856
+        ]
+      },
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.007089641355749618,
+          "fit_projection_rmse": 0.0036795089578080535
+        },
+        "model_raw": {
+          "voxel_rmse": 0.004635323146873631,
+          "fit_projection_rmse": 0.0029110388237515465
+        },
+        "sirt23": {
+          "voxel_rmse": 0.006850751827399108,
+          "fit_projection_rmse": 0.0034518669280989996
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.004418700871141819,
+          "fit_projection_rmse": 0.0026621889724438813
+        }
+      },
+      "input_quantization_max_abs": 0.0001220703125
+    },
+    {
+      "region": {
+        "case_id": "external_004",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1024,
+          1152
+        ],
+        "x": [
+          1728,
+          1856
+        ]
+      },
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.006939367722947297,
+          "fit_projection_rmse": 0.003595645853517383
+        },
+        "model_raw": {
+          "voxel_rmse": 0.004595036329792568,
+          "fit_projection_rmse": 0.002880384015952799
+        },
+        "sirt23": {
+          "voxel_rmse": 0.0067080567594622565,
+          "fit_projection_rmse": 0.0033742900638200654
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.0043826187224498435,
+          "fit_projection_rmse": 0.002638323815620923
+        }
+      },
+      "input_quantization_max_abs": 0.0001220703125
+    },
+    {
+      "region": {
+        "case_id": "external_005",
+        "z": [
+          45,
+          173
+        ],
+        "y": [
+          1216,
+          1344
+        ],
+        "x": [
+          1728,
+          1856
+        ]
+      },
+      "metrics": {
+        "sirt20": {
+          "voxel_rmse": 0.007096259716360355,
+          "fit_projection_rmse": 0.003710463930280296
+        },
+        "model_raw": {
+          "voxel_rmse": 0.004790809712651962,
+          "fit_projection_rmse": 0.0029932350146945506
+        },
+        "sirt23": {
+          "voxel_rmse": 0.006858782168383869,
+          "fit_projection_rmse": 0.003481175483760559
+        },
+        "model_sirt3": {
+          "voxel_rmse": 0.004572564672739029,
+          "fit_projection_rmse": 0.0027437383563022294
+        }
+      },
+      "input_quantization_max_abs": 0.0001220703125
+    }
+  ],
+  "mean_metrics": {
+    "sirt20": {
+      "voxel_rmse": 0.006725959625188551,
+      "fit_projection_rmse": 0.003508098029039368
+    },
+    "model_raw": {
+      "voxel_rmse": 0.004405979409893441,
+      "fit_projection_rmse": 0.0027706003732489736
+    },
+    "sirt23": {
+      "voxel_rmse": 0.006498283898188344,
+      "fit_projection_rmse": 0.0032911797183331573
+    },
+    "model_sirt3": {
+      "voxel_rmse": 0.004198911570687501,
+      "fit_projection_rmse": 0.002534666338124917
+    }
+  },
+  "raw_model_voxel_rmse_reduction_vs_sirt20_percent": 34.492925092901864,
+  "model_sirt3_voxel_rmse_reduction_vs_sirt23_percent": 35.38430089430048,
+  "model_sirt3_better_regions_vs_sirt23": 6,
+  "geometry_source": {
+    "source_origin_mm": 129.03973962,
+    "source_detector_mm": 806.495599,
+    "original_detector_pitch_xy_mm": [
+      0.2,
+      0.2
+    ],
+    "reduced_detector_pitch_xy_mm": [
+      0.6000000000000001,
+      0.6000000000000001
+    ],
+    "volume_width_mm": 24.000082165002823,
+    "volume_voxel_mm": 0.09375032095704228,
+    "size_xyz": [
+      256,
+      256,
+      256
+    ],
+    "ignored_vendor_tilt": -0.00044246,
+    "vendor_correction_value_not_interpreted": 1.095
+  },
+  "simulation_width": 12.000041082501411,
+  "protocol": {
+    "views": 75,
+    "angles_degrees": [
+      0.0,
+      4.8,
+      9.6,
+      14.399999999999999,
+      19.2,
+      24.0,
+      28.799999999999997,
+      33.6,
+      38.4,
+      43.199999999999996,
+      48.0,
+      52.8,
+      57.599999999999994,
+      62.4,
+      67.2,
+      72.0,
+      76.8,
+      81.6,
+      86.39999999999999,
+      91.2,
+      96.0,
+      100.8,
+      105.6,
+      110.39999999999999,
+      115.19999999999999,
+      120.0,
+      124.8,
+      129.6,
+      134.4,
+      139.2,
+      144.0,
+      148.79999999999998,
+      153.6,
+      158.4,
+      163.2,
+      168.0,
+      172.79999999999998,
+      177.6,
+      182.4,
+      187.2,
+      192.0,
+      196.79999999999998,
+      201.6,
+      206.4,
+      211.2,
+      216.0,
+      220.79999999999998,
+      225.6,
+      230.39999999999998,
+      235.2,
+      240.0,
+      244.79999999999998,
+      249.6,
+      254.39999999999998,
+      259.2,
+      264.0,
+      268.8,
+      273.59999999999997,
+      278.4,
+      283.2,
+      288.0,
+      292.8,
+      297.59999999999997,
+      302.4,
+      307.2,
+      312.0,
+      316.8,
+      321.59999999999997,
+      326.4,
+      331.2,
+      336.0,
+      340.8,
+      345.59999999999997,
+      350.4,
+      355.2
+    ],
+    "noise": "none",
+    "intensity_rule": "uint16 / 65535 * 0.4; arbitrary simulation attenuation units",
+    "physical_calibration_known": false,
+    "model_patch": 80,
+    "model_stride": 40,
+    "model_tiles_per_region": 27,
+    "input_float16_roundtrip": true,
+    "sirt_min_constraint": 0,
+    "extra_sirt_steps_both_controls": 3,
+    "performance_based_selection": false
+  },
+  "total_seconds": 10.489889700023923,
+  "torch_version": "2.11.0+cu128",
+  "astra_version": "2.5.0",
+  "limitations": [
+    "Six regions from one 2000bar TIFF stack are not six independent specimens.",
+    "The physical relationship between 0bar and 2000bar specimens is unconfirmed; this is a separate-stack test.",
+    "Reference volumes are reconstructed TIFF data, not independent physical ground truth.",
+    "Noiseless simulated projections use matching forward/inverse geometry, which can overestimate real acquisition performance.",
+    "Intensity conversion and geometry are simulation assumptions, not calibrated NMC attenuation or voxel spacing.",
+    "Fit projection RMSE uses reconstruction views and is not a held-out projection metric.",
+    "No training, tuning, crop selection by performance, or weight updates were performed.",
+    "These six regions are now consumed evaluation data; further tuning requires another independent evaluation.",
+    "This does not establish defect detection, battery health, or time-resolved 4D reconstruction accuracy."
+  ]
+}
